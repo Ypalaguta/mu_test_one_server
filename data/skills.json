@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Slash",
+    "targeting": "unit",
+    "cost": {
+      "resource": "none",
+      "amount": 0
+    },
+    "cooldown": 1,
+    "range": 200
+  },
+  {
+    "id": 2,
+    "name": "Fireball",
+    "targeting": "unit",
+    "cost": {
+      "resource": "mp",
+      "amount": 10
+    },
+    "cooldown": 2,
+    "range": 1000
+  }
+]

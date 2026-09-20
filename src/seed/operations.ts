@@ -1,0 +1,22 @@
+import type { SeedData } from './data.js';
+export interface SeedOperation {
+  collection: string;
+  filter: Record<string, number | string>;
+  update: { $set?: Record<string, unknown>; $setOnInsert?: Record<string, unknown> };
+}
+function clean(value: object): Record<string, unknown> {
+  return Object.fromEntries(Object.entries(value).filter(([key]) => key !== '_id' && key !== '__v'));
+}
+export function createOperations(data: SeedData, mode: 'static' | 'dev'): SeedOperation[] {
+  if (mode === 'dev') return data.characters.map(doc => ({ collection: 'characters', filter: { id: doc.id }, update: { $setOnInsert: clean(doc) } }));
+  const operations: SeedOperation[] = [];
+  for (const collection of ['skills','classes','items','monsters'] as const)
+    for (const doc of data[collection]) operations.push({ collection, filter: { id: doc.id }, update: { $set: clean(doc) } });
+  for (const doc of data.spawns)
+    operations.push({ collection: 'monsterSpawns', filter: { locationId: doc.locationId }, update: { $set: clean(doc) } });
+  return operations;
+}
+export interface SeedWriter { write(operation: SeedOperation): Promise<void> }
+export async function applyOperations(operations: readonly SeedOperation[], writer: SeedWriter): Promise<void> {
+  for (const operation of operations) await writer.write(operation);
+}

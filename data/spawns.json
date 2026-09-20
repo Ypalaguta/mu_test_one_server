@@ -1,0 +1,56 @@
+[
+  {
+    "locationId": "forest",
+    "camps": [
+      {
+        "campId": "forest_mixed_01",
+        "position": {
+          "x": 950,
+          "y": 810,
+          "z": 90
+        },
+        "yaw": 0,
+        "mode": "PeriodicIfAreaEmpty",
+        "spawnOnStart": true,
+        "respawnDelay": 30,
+        "interval": 60,
+        "phaseOffset": 0,
+        "clearanceRadius": 700,
+        "clearanceHalfHeight": 300,
+        "maxAlive": 15,
+        "monsters": [
+          {
+            "enemyId": "101",
+            "level": 5,
+            "offset": {
+              "x": -150,
+              "y": 0,
+              "z": 0
+            },
+            "yaw": 0
+          },
+          {
+            "enemyId": "101",
+            "level": 5,
+            "offset": {
+              "x": 150,
+              "y": 0,
+              "z": 0
+            },
+            "yaw": 180
+          },
+          {
+            "enemyId": "102",
+            "level": 6,
+            "offset": {
+              "x": 0,
+              "y": 250,
+              "z": 0
+            },
+            "yaw": 270
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "info": {
+      "level": 1,
+      "experience": 0,
+      "classId": 1,
+      "skillPoints": 0,
+      "gold": 0,
+      "reputation": 0,
+      "characterName": "Admin",
+      "characterTitle": "",
+      "staff": "",
+      "clan": "",
+      "alliance": "",
+      "race": "",
+      "faction": ""
+    }
+  }
+]
