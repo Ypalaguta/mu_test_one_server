@@ -1,6 +1,7 @@
 import type { RequestHandler } from 'express';
 import type { Repository } from '../shared/contracts.js';
 import { characterStats } from '../modules/characters/service.js';
+import { parseActionBarSlots } from '../modules/action-bar/service.js';
 import { ApiError, found, parseId } from './errors.js';
 
 function withErrorLogging(
@@ -43,6 +44,32 @@ export function createController(repo: Repository) {
         console.log(`getCharacterStats ${id}`);
 
         res.json(await characterStats(repo, id));
+    });
+
+    const characterActionBar = withErrorLogging('characterActionBar', async (req, res) => {
+        const id = parseId(req.params.id);
+
+        console.log(`characterActionBar ${id}`);
+
+        const doc = found(await repo.actionBar(id));
+
+        res.json({
+            // Existing character documents created before this feature may not have the field yet.
+            slots: doc.actionBarSlots ?? []
+        });
+    });
+
+    const saveCharacterActionBar = withErrorLogging('saveCharacterActionBar', async (req, res) => {
+        const id = parseId(req.params.id);
+        const slots = parseActionBarSlots(req.body);
+
+        console.log(`saveCharacterActionBar ${id}`);
+
+        const doc = found(await repo.saveActionBar(id, slots));
+
+        res.json({
+            slots: doc.actionBarSlots
+        });
     });
 
     const monsterInfo = withErrorLogging('monsterInfo', async (req, res) => {
@@ -147,6 +174,8 @@ export function createController(repo: Repository) {
     return {
         characterInfo,
         characterStats: getCharacterStats,
+        characterActionBar,
+        saveCharacterActionBar,
         monsterInfo,
         monsterStats,
         monsterSpawns,

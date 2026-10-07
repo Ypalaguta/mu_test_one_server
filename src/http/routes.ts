@@ -5,6 +5,8 @@ export function createRoutes(repo: Repository): Router {
   const r = Router(); const c = createController(repo);
   r.get('/characters/:id/info', c.characterInfo);
   r.get('/characters/:id/stats', c.characterStats);
+  r.get('/characters/:id/action-bar', c.characterActionBar);
+  r.put('/characters/:id/action-bar', c.saveCharacterActionBar);
   r.get('/monsters/:id/info', c.monsterInfo);
   r.get('/monsters/:id/stats', c.monsterStats);
   r.get('/locations/:locationId/monster-spawns', c.monsterSpawns);

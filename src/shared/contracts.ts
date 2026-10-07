@@ -4,10 +4,13 @@ import type { Stats } from './statFields.js';
 import type { classSchema } from '../modules/classes/model.js';
 import type { itemSchema } from '../modules/items/model.js';
 import type { skillSchema } from '../modules/skills/model.js';
+import type { ActionBarSlot } from '../modules/action-bar/model.js';
 export type Info = InferSchemaType<typeof infoSchema>;
-export interface CharacterRecord { id: number; info: Info }
+export interface EntityRecord { id: number; info: Info }
+export interface CharacterRecord extends EntityRecord { actionBarSlots: ActionBarSlot[] }
+export interface ActionBarRecord { actionBarSlots: ActionBarSlot[] }
 export interface StatsResponse { baseStats: Stats; growthStats: Stats }
-export interface MonsterRecord extends CharacterRecord, StatsResponse {}
+export interface MonsterRecord extends EntityRecord, StatsResponse {}
 export type ClassRecord = InferSchemaType<typeof classSchema>;
 export type ItemRecord = InferSchemaType<typeof itemSchema>;
 export type SkillRecord = InferSchemaType<typeof skillSchema>;
@@ -20,6 +23,8 @@ export interface Camp {
 export interface LocationRecord { locationId: string; camps: Camp[] }
 export interface Repository {
   character(id: number): Promise<CharacterRecord | null>;
+  actionBar(id: number): Promise<ActionBarRecord | null>;
+  saveActionBar(id: number, slots: ActionBarSlot[]): Promise<ActionBarRecord | null>;
   monster(id: number): Promise<MonsterRecord | null>;
   characterClass(id: number): Promise<ClassRecord | null>;
   item(id: number): Promise<ItemRecord | null>;

@@ -40,7 +40,7 @@ TypeScript 7.0.2 (зафиксирован в package-lock.json).
 NodeNext/ESM. Типы Mongoose встроены, пакет @types/mongoose не нужен.
 
 .env: HOST=127.0.0.1, PORT=3000, MONGODB_URI=mongodb://127.0.0.1:27017/mu_test_one.
-Сервер по умолчанию доступен локально. Авторизация/запись прогресса/бой в этот MVP не входят.
+Сервер по умолчанию доступен локально. Авторизация и бой в этот MVP не входят.
 
 ## Шесть файлов данных
 
@@ -112,6 +112,7 @@ db.characters.updateOne({ id: 1, "info.classId": 0 }, { $set: { "info.classId": 
 | --- | --- |
 | /api/characters/:id/info | id + прежние поля info |
 | /api/characters/:id/stats | { baseStats, growthStats } из класса персонажа |
+| /api/characters/:id/action-bar | { slots: [...] } с раскладкой action bar |
 | /api/monsters/:id/info | id + прежние поля info |
 | /api/monsters/:id/stats | { baseStats, growthStats } монстра |
 | /api/locations/:locationId/monster-spawns | { camps: [...] } |
@@ -120,12 +121,22 @@ db.characters.updateOne({ id: 1, "info.classId": 0 }, { $set: { "info.classId": 
 | /api/skills/:id | Определение умения |
 | /health | { ready: true/false } |
 
+| PUT | Тело и ответ |
+| --- | --- |
+| /api/characters/:id/action-bar | `{ "slots": [{ "slotNum": 0, "id": 1, "type": "Skill" }] }` |
+
+Action bar хранится внутри документа персонажа. Допустимы 36 позиций с номерами 0–35,
+типы `Action`, `Skill`, `Item`; `None` не передаётся. PUT полностью заменяет раскладку.
+Пустой массив очищает её. У старых персонажей без поля API вернёт `{ "slots": [] }`.
+
 Примеры:
 
 ```powershell
 Invoke-RestMethod http://127.0.0.1:3000/api/characters/1/info
 Invoke-RestMethod http://127.0.0.1:3000/api/characters/1/stats
 Invoke-RestMethod http://127.0.0.1:3000/api/items/1
+$body = @{ slots = @(@{ slotNum = 0; id = 1; type = 'Skill' }) } | ConvertTo-Json -Depth 3
+Invoke-RestMethod -Method Put -ContentType 'application/json' -Body $body http://127.0.0.1:3000/api/characters/1/action-bar
 ```
 
 Изменения классов отражаются на следующей загрузке статов персонажа. Шаблоны монстров
@@ -140,6 +151,7 @@ Invoke-RestMethod http://127.0.0.1:3000/api/items/1
 - src/http/controller.ts — HTTP-адаптеры и явные формы ответов.
 - src/modules/<module>/model.ts — отдельные модели шести модулей.
 - src/modules/characters/service.ts — получение статов из класса.
+- src/modules/action-bar/ — схема и проверка сохраняемой раскладки.
 - src/shared/contracts.ts — контракт репозитория и типы ответов.
 - src/shared/database.ts — MongoDB-адаптер этого контракта.
 - src/shared/schemas.ts, statFields.ts — переиспользуемые схемы и 70 статов.
@@ -158,7 +170,7 @@ npm run seed:check
 npm test
 ```
 
-Сборка TypeScript и 6 тестов прошли в среде подготовки. Проверены старые HTTP-контракты,
+Сборка TypeScript и 9 тестов прошли в среде подготовки. Проверены старые HTTP-контракты,
 новые endpoints, происхождение статов, ошибки, все данные, ссылки и повторное применение
 seed-операций к тестовому хранилищу. Это не интеграционный тест реальной MongoDB:
 запись в настоящую базу нужно проверить локально. C++ в этом комплекте не изменяется.

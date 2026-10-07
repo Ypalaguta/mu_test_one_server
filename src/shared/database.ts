@@ -14,6 +14,13 @@ export async function connectDatabase(): Promise<void> {
 }
 export const repository: Repository = {
   character: id => Character.findOne({ id }).lean().maxTimeMS(5000).exec(),
+  actionBar: id => Character.findOne({ id })
+    .select({ actionBarSlots: 1, _id: 0 }).lean().maxTimeMS(5000).exec(),
+  saveActionBar: (id, slots) => Character.findOneAndUpdate(
+    { id },
+    { $set: { actionBarSlots: slots } },
+    { new: true, runValidators: true }
+  ).select({ actionBarSlots: 1, _id: 0 }).lean().maxTimeMS(5000).exec(),
   monster: id => Monster.findOne({ id }).lean().maxTimeMS(5000).exec(),
   characterClass: id => CharacterClass.findOne({ id }).lean().maxTimeMS(5000).exec(),
   item: id => Item.findOne({ id }).lean().maxTimeMS(5000).exec(),

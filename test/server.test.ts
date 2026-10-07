@@ -10,9 +10,18 @@ import { createApp } from '../src/app.js';
 import type { Repository } from '../src/shared/contracts.js';
 import { statFields } from '../src/shared/statFields.js';
 import { Monster } from '../src/modules/monsters/model.js';
+import { Character } from '../src/modules/characters/model.js';
+import type { ActionBarSlot } from '../src/modules/action-bar/model.js';
 const data = await loadData('data');
+let savedActionBar: ActionBarSlot[] = [];
 const repo: Repository = {
   character: async id => data.characters.find(v => v.id === id) ?? null,
+  actionBar: async id => id === 1 ? { actionBarSlots: structuredClone(savedActionBar) } : null,
+  saveActionBar: async (id, slots) => {
+    if (id !== 1) return null;
+    savedActionBar = structuredClone(slots);
+    return { actionBarSlots: structuredClone(savedActionBar) };
+  },
   monster: async id => data.monsters.find(v => v.id === id) ?? null,
   characterClass: async id => data.classes.find(v => v.id === id) ?? null,
   item: async id => data.items.find(v => v.id === id) ?? null,
@@ -46,6 +55,46 @@ test('Unreal HTTP contracts and class-based stats are preserved', async () => {
     for (const path of ['items/1','classes/1','skills/1']) {
       const res = await fetch(`${base}/api/${path}`); assert.equal(res.status, 200);
       const d = await res.json(); assert.equal(d.id, 1); assert.equal(JSON.stringify(d).includes('"_id"'), false);
+    }
+  });
+});
+test('action bar can be replaced and loaded using the compact Unreal DTO', async () => {
+  savedActionBar = [];
+  await withApi(repo, async base => {
+    const empty = await (await fetch(`${base}/api/characters/1/action-bar`)).json();
+    assert.deepEqual(empty, { slots: [] });
+
+    const slots = [
+      { slotNum: 8, id: 102, type: 'Item' },
+      { slotNum: 0, id: 1, type: 'Skill' }
+    ];
+    const saved = await fetch(`${base}/api/characters/1/action-bar`, {
+      method: 'PUT',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ slots })
+    });
+    assert.equal(saved.status, 200);
+    assert.deepEqual(await saved.json(), { slots: [slots[1], slots[0]] });
+
+    const loaded = await (await fetch(`${base}/api/characters/1/action-bar`)).json();
+    assert.deepEqual(loaded, { slots: [slots[1], slots[0]] });
+  });
+});
+test('action bar rejects invalid and duplicate slots', async () => {
+  await withApi(repo, async base => {
+    const invalidBodies = [
+      {},
+      { slots: [{ slotNum: 36, id: 1, type: 'Skill' }] },
+      { slots: [{ slotNum: 0, id: 0, type: 'Skill' }] },
+      { slots: [{ slotNum: 0, id: 1, type: 'None' }] },
+      { slots: [{ slotNum: 0, id: 1, type: 'Skill' }, { slotNum: 0, id: 2, type: 'Item' }] }
+    ];
+    for (const body of invalidBodies) {
+      const response = await fetch(`${base}/api/characters/1/action-bar`, {
+        method: 'PUT', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body)
+      });
+      assert.equal(response.status, 400);
+      assert.equal((await response.json()).error, 'INVALID_ACTION_BAR');
     }
   });
 });
@@ -88,4 +137,14 @@ test('broken references and duplicate IDs fail preflight', async () => {
 test('unknown stat names and non-finite values are rejected', async () => {
   await assert.rejects(new Monster({ id: 1, baseStats: { typo: 2 } }).validate());
   await assert.rejects(new Monster({ id: 1, baseStats: { hp: Infinity } }).validate());
+});
+test('character schema rejects duplicate action bar slots', async () => {
+  await assert.rejects(new Character({
+    id: 2,
+    info: {},
+    actionBarSlots: [
+      { slotNum: 0, id: 1, type: 'Skill' },
+      { slotNum: 0, id: 2, type: 'Item' }
+    ]
+  }).validate());
 });
