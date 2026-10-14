@@ -13,17 +13,20 @@ export async function connectDatabase(): Promise<void> {
   await Promise.all([Character.init(), Monster.init(), CharacterClass.init(), Item.init(), Skill.init(), MonsterSpawns.init()]);
 }
 export const repository: Repository = {
+  items: () => Item.find().sort({ id: 1 }).lean().maxTimeMS(5000).exec(),
+  saveState: (id, revision, value) => Character.findOneAndUpdate({ id, revision }, { $set: { info: value.info, progress: value.progress, actionBarSlots: value.actionBarSlots }, $inc: { revision: 1 } }, { new: true, runValidators: true }).lean().maxTimeMS(5000).exec(),
   character: id => Character.findOne({ id }).lean().maxTimeMS(5000).exec(),
   actionBar: id => Character.findOne({ id })
     .select({ actionBarSlots: 1, _id: 0 }).lean().maxTimeMS(5000).exec(),
   saveActionBar: (id, slots) => Character.findOneAndUpdate(
     { id },
-    { $set: { actionBarSlots: slots } },
+    { $set: { actionBarSlots: slots }, $inc: { revision: 1 } },
     { new: true, runValidators: true }
   ).select({ actionBarSlots: 1, _id: 0 }).lean().maxTimeMS(5000).exec(),
   monster: id => Monster.findOne({ id }).lean().maxTimeMS(5000).exec(),
   characterClass: id => CharacterClass.findOne({ id }).lean().maxTimeMS(5000).exec(),
   item: id => Item.findOne({ id }).lean().maxTimeMS(5000).exec(),
+  skills: () => Skill.find().sort({ id: 1 }).lean().maxTimeMS(5000).exec(),
   skill: id => Skill.findOne({ id }).lean().maxTimeMS(5000).exec(),
   location: locationId => MonsterSpawns.findOne({ locationId }).lean().maxTimeMS(5000).exec()
 };

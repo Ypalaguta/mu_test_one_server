@@ -14,7 +14,8 @@
     "seed:static": "node --env-file=.env --import tsx src/seed/run.ts static",
     "seed:dev": "node --env-file=.env --import tsx src/seed/run.ts dev",
     "seed:check": "node --import tsx src/seed/check.ts",
-    "test": "node --import tsx --test test/*.test.ts"
+    "test": "node --import tsx --test test/*.test.ts",
+    "seed:skills": "node --env-file=.env --import tsx src/seed/run.ts skills"
   },
   "dependencies": {
     "express": "^5.2.1",

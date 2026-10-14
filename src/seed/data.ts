@@ -5,6 +5,7 @@ import { Monster } from '../modules/monsters/model.js';
 import { MonsterSpawns } from '../modules/spawns/model.js';
 import { CharacterClass } from '../modules/classes/model.js';
 import { Item } from '../modules/items/model.js';
+import { validateSkillGraph } from '../modules/skills/service.js';
 import { Skill } from '../modules/skills/model.js';
 
 async function records<T>(directory: string, filename: string, parse: (row: object) => Promise<T>): Promise<T[]> {
@@ -26,6 +27,7 @@ function reference(ids: ReadonlySet<number>, value: number, label: string): void
 }
 export async function loadData(directory: string) {
   const skills = await records(directory, 'skills.json', async row => { const doc = new Skill(row); await doc.validate(); return doc.toObject(); });
+  validateSkillGraph(skills);
   const classes = await records(directory, 'classes.json', async row => { const doc = new CharacterClass(row); await doc.validate(); return doc.toObject(); });
   const items = await records(directory, 'items.json', async row => { const doc = new Item(row); await doc.validate(); return doc.toObject(); });
   const monsters = await records(directory, 'monsters.json', async row => { const doc = new Monster(row); await doc.validate(); return doc.toObject(); });

@@ -5,7 +5,7 @@ import { CharacterClass } from '../modules/classes/model.js';
 import { loadData } from './data.js';
 import { createOperations, applyOperations } from './operations.js';
 const mode = process.argv[2];
-if (mode !== 'static' && mode !== 'dev') throw new Error('Expected static or dev');
+if (mode !== 'static' && mode !== 'dev' && mode !== 'skills') throw new Error('Expected static, dev or skills');
 // Complete validation, including cross-file references, before any data mutation.
 const data = await loadData(resolve(process.env.SEED_DIR || 'data'));
 try {

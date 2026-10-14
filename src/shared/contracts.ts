@@ -7,7 +7,9 @@ import type { skillSchema } from '../modules/skills/model.js';
 import type { ActionBarSlot } from '../modules/action-bar/model.js';
 export type Info = InferSchemaType<typeof infoSchema>;
 export interface EntityRecord { id: number; info: Info }
-export interface CharacterRecord extends EntityRecord { actionBarSlots: ActionBarSlot[] }
+export interface InventoryStack { slot: number; itemId: number; quantity: number }
+export interface Progress { inventoryCapacity: number; inventory: InventoryStack[]; achievements: number[]; accessible: number[]; learned: number[]; selectedModifiers: {familyId:number;skillId:number}[] }
+export interface CharacterRecord extends EntityRecord { revision: number; progress: Progress; actionBarSlots: ActionBarSlot[] }
 export interface ActionBarRecord { actionBarSlots: ActionBarSlot[] }
 export interface StatsResponse { baseStats: Stats; growthStats: Stats }
 export interface MonsterRecord extends EntityRecord, StatsResponse {}
@@ -22,12 +24,15 @@ export interface Camp {
 }
 export interface LocationRecord { locationId: string; camps: Camp[] }
 export interface Repository {
+  saveState(id: number, expectedRevision: number, value: CharacterRecord): Promise<CharacterRecord | null>;
+  items(): Promise<ItemRecord[]>;
   character(id: number): Promise<CharacterRecord | null>;
   actionBar(id: number): Promise<ActionBarRecord | null>;
   saveActionBar(id: number, slots: ActionBarSlot[]): Promise<ActionBarRecord | null>;
   monster(id: number): Promise<MonsterRecord | null>;
   characterClass(id: number): Promise<ClassRecord | null>;
   item(id: number): Promise<ItemRecord | null>;
+  skills(): Promise<SkillRecord[]>;
   skill(id: number): Promise<SkillRecord | null>;
   location(id: string): Promise<LocationRecord | null>;
 }

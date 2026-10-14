@@ -81,7 +81,12 @@
       "magicColdInc": 0,
       "magicLightningInc": 0,
       "magicChaosInc": 0
-    }
+    },
+    "inventoryTab": "Equipment",
+    "maxStack": 1,
+    "iconName": "Item_1",
+    "executionId": "",
+    "description": ""
   },
   {
     "id": 2,
@@ -165,7 +170,12 @@
       "magicColdInc": 0,
       "magicLightningInc": 0,
       "magicChaosInc": 0
-    }
+    },
+    "inventoryTab": "Equipment",
+    "maxStack": 1,
+    "iconName": "Item_2",
+    "executionId": "",
+    "description": ""
   },
   {
     "id": 3,
@@ -247,6 +257,11 @@
       "magicColdInc": 0,
       "magicLightningInc": 0,
       "magicChaosInc": 0
-    }
+    },
+    "inventoryTab": "Equipment",
+    "maxStack": 1,
+    "iconName": "Item_3",
+    "executionId": "",
+    "description": ""
   }
 ]

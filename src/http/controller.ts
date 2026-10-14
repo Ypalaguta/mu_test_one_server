@@ -1,5 +1,6 @@
 import type { RequestHandler } from 'express';
 import type { Repository } from '../shared/contracts.js';
+import { skillResponse } from '../modules/skills/service.js';
 import { characterStats } from '../modules/characters/service.js';
 import { parseActionBarSlots } from '../modules/action-bar/service.js';
 import { ApiError, found, parseId } from './errors.js';
@@ -128,14 +129,13 @@ export function createController(repo: Repository) {
 
         const d = found(await repo.item(id));
 
-        res.json({
-            id: d.id,
-            name: d.name,
-            type: d.type,
-            slot: d.slot,
-            requirements: d.requirements,
-            stats: d.stats
-        });
+        res.json({ id: d.id, name: d.name, type: d.type, slot: d.slot, requirements: d.requirements,
+            stats: d.stats, description: d.description, iconName: d.iconName, executionId: d.executionId,
+            inventoryTab: d.inventoryTab, maxStack: d.maxStack });
+    });
+
+    const skills = withErrorLogging('skills', async (_req, res) => {
+        res.json((await repo.skills()).map(skillResponse));
     });
 
     const skill = withErrorLogging('skill', async (req, res) => {
@@ -145,14 +145,7 @@ export function createController(repo: Repository) {
 
         const d = found(await repo.skill(id));
 
-        res.json({
-            id: d.id,
-            name: d.name,
-            targeting: d.targeting,
-            cost: d.cost,
-            cooldown: d.cooldown,
-            range: d.range
-        });
+        res.json(skillResponse(d));
     });
 
     const characterClass = withErrorLogging('characterClass', async (req, res) => {
@@ -181,6 +174,7 @@ export function createController(repo: Repository) {
         monsterSpawns,
         item,
         skill,
+        skills,
         characterClass
     };
 }

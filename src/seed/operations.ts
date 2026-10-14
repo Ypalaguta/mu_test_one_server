@@ -2,17 +2,18 @@ import type { SeedData } from './data.js';
 export interface SeedOperation {
   collection: string;
   filter: Record<string, number | string>;
-  update: { $set?: Record<string, unknown>; $setOnInsert?: Record<string, unknown> };
+  update: { $set?: Record<string, unknown>; $setOnInsert?: Record<string, unknown>; $unset?: Record<string, string> };
 }
 function clean(value: object): Record<string, unknown> {
   return Object.fromEntries(Object.entries(value).filter(([key]) => key !== '_id' && key !== '__v'));
 }
-export function createOperations(data: SeedData, mode: 'static' | 'dev'): SeedOperation[] {
+export function createOperations(data: SeedData, mode: 'static' | 'dev' | 'skills'): SeedOperation[] {
   if (mode === 'dev') return data.characters.map(doc => ({ collection: 'characters', filter: { id: doc.id }, update: { $setOnInsert: clean(doc) } }));
   const operations: SeedOperation[] = [];
-  for (const collection of ['skills','classes','items','monsters'] as const)
+  const collections = mode === 'skills' ? ['skills'] as const : ['skills','classes','items','monsters'] as const;
+  for (const collection of collections)
     for (const doc of data[collection]) operations.push({ collection, filter: { id: doc.id }, update: { $set: clean(doc) } });
-  for (const doc of data.spawns)
+  if (mode !== 'skills') for (const doc of data.spawns)
     operations.push({ collection: 'monsterSpawns', filter: { locationId: doc.locationId }, update: { $set: clean(doc) } });
   return operations;
 }

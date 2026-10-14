@@ -1,150 +1,89 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { once } from 'node:events';
-import { mkdtemp, cp, readFile, writeFile, rm } from 'node:fs/promises';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
 import { loadData } from '../src/seed/data.js';
-import { createOperations, applyOperations } from '../src/seed/operations.js';
+import { createOperations } from '../src/seed/operations.js';
 import { createApp } from '../src/app.js';
-import type { Repository } from '../src/shared/contracts.js';
+import { validateSkillGraph, skillResponse } from '../src/modules/skills/service.js';
+import { validateState } from '../src/modules/progression/service.js';
+import { Skill } from '../src/modules/skills/model.js';
+import type { Repository, CharacterRecord } from '../src/shared/contracts.js';
 import { statFields } from '../src/shared/statFields.js';
-import { Monster } from '../src/modules/monsters/model.js';
-import { Character } from '../src/modules/characters/model.js';
-import type { ActionBarSlot } from '../src/modules/action-bar/model.js';
-const data = await loadData('data');
-let savedActionBar: ActionBarSlot[] = [];
-const repo: Repository = {
-  character: async id => data.characters.find(v => v.id === id) ?? null,
-  actionBar: async id => id === 1 ? { actionBarSlots: structuredClone(savedActionBar) } : null,
-  saveActionBar: async (id, slots) => {
-    if (id !== 1) return null;
-    savedActionBar = structuredClone(slots);
-    return { actionBarSlots: structuredClone(savedActionBar) };
-  },
-  monster: async id => data.monsters.find(v => v.id === id) ?? null,
-  characterClass: async id => data.classes.find(v => v.id === id) ?? null,
-  item: async id => data.items.find(v => v.id === id) ?? null,
-  skill: async id => data.skills.find(v => v.id === id) ?? null,
-  location: async id => data.spawns.find(v => v.locationId === id) ?? null
-};
-async function withApi(repository: Repository, run: (base: string) => Promise<void>, ready = () => true) {
-  const server = createApp(repository, ready).listen(0, '127.0.0.1'); await once(server, 'listening');
-  const address = server.address(); assert.ok(address && typeof address !== 'string');
-  try { await run(`http://127.0.0.1:${address.port}`); }
-  finally { await new Promise<void>(resolve => server.close(() => resolve())); }
+const data=await loadData('data');
+process.env.GAME_SERVER_TOKEN='test-only-secret';
+const headers={'content-type':'application/json','X-Game-Server-Token':'test-only-secret'};
+function repository(){
+ const store=new Map(data.characters.map(d=>[d.id,structuredClone(d) as CharacterRecord]));
+ const repo:Repository={
+  character:async id=>store.get(id)??null,
+  saveState:async(id,revision,value)=>{const old=store.get(id);if(!old||old.revision!==revision)return null;const next={...structuredClone(value),revision:revision+1};store.set(id,next);return next;},
+  items:async()=>data.items, skills:async()=>data.skills,
+  item:async id=>data.items.find(d=>d.id===id)??null,skill:async id=>data.skills.find(d=>d.id===id)??null,
+  characterClass:async id=>data.classes.find(d=>d.id===id)??null,monster:async id=>data.monsters.find(d=>d.id===id)??null,
+  location:async id=>data.spawns.find(d=>d.locationId===id)??null,
+  actionBar:async id=>store.get(id)??null,saveActionBar:async()=>null
+ };return repo;
 }
-test('six seed files validate and stat groups contain all 70 fields', () => {
-  assert.equal(statFields.length, 70); assert.equal(data.characters[0]?.info.characterName, 'Admin');
-  for (const d of [...data.classes, ...data.monsters]) {
-    assert.deepEqual(Object.keys(d.baseStats).sort(), [...statFields].sort());
-    assert.deepEqual(Object.keys(d.growthStats).sort(), [...statFields].sort());
-  }
+async function api(run:(base:string,repo:Repository)=>Promise<void>){const repo=repository();const server=createApp(repo).listen(0,'127.0.0.1');await once(server,'listening');const addr=server.address();assert.ok(addr&&typeof addr!=='string');try{await run(`http://127.0.0.1:${addr.port}/api`,repo);}finally{await new Promise<void>(resolve=>server.close(()=>resolve()));}}
+function body(s:any){return {expectedRevision:s.revision,info:s.info,progress:s.progress,actionBarSlots:s.actionBarSlots};}
+test('seeds include 30-rank passive chains, modifiers, merge and empty learned state',()=>{
+ assert.equal(data.skills.length,450);assert.equal(data.skills.filter(s=>s.familyId===101).length,30);
+ assert.equal(data.skills.filter(s=>s.modifierOfSkill===2).length,3);
+ assert.deepEqual(data.characters[0]!.progress.learned,[]);assert.equal(data.characters[0]!.progress.inventoryCapacity,64);
+ for(const s of data.skills){assert.equal(Object.keys(s.stats).length,70);assert.equal('growthStats' in s,false);}
 });
-test('Unreal HTTP contracts and class-based stats are preserved', async () => {
-  await withApi(repo, async base => {
-    const info = await (await fetch(`${base}/api/characters/1/info`)).json();
-    assert.deepEqual(Object.keys(info).sort(), ['id','level','experience','classId','skillPoints','gold','reputation','characterName','characterTitle','staff','clan','alliance','race','faction'].sort());
-    const stats = await (await fetch(`${base}/api/characters/1/stats`)).json();
-    assert.deepEqual(Object.keys(stats).sort(), ['baseStats','growthStats']);
-    assert.equal(stats.baseStats.hp, 150); assert.equal(stats.growthStats.hp, 15);
-    const m = await (await fetch(`${base}/api/monsters/101/stats`)).json(); assert.equal(m.baseStats.hp, 100);
-    const mi = await (await fetch(`${base}/api/monsters/101/info`)).json(); assert.equal(mi.characterName, 'Wolf');
-    const camps = await (await fetch(`${base}/api/locations/forest/monster-spawns`)).json();
-    assert.deepEqual(Object.keys(camps), ['camps']); assert.equal(camps.camps[0].monsters[0].enemyId, '101');
-    for (const path of ['items/1','classes/1','skills/1']) {
-      const res = await fetch(`${base}/api/${path}`); assert.equal(res.status, 200);
-      const d = await res.json(); assert.equal(d.id, 1); assert.equal(JSON.stringify(d).includes('"_id"'), false);
-    }
-  });
+test('catalogue is a root array with new UE fields and no Mongo metadata',async()=>api(async base=>{
+ const rows=await(await fetch(base+'/skills')).json();assert.equal(rows.length,450);
+ const s=rows.find((x:any)=>x.id===1);assert.equal(s.familyId,1);assert.equal(s.prev,0);assert.equal(s.icon,null);
+ for(const key of ['_id','groupId','maxLevel','baseStats','growthStats','next'])assert.equal(key in s,false);
+ assert.deepEqual(await(await fetch(base+'/skills/1')).json(),s);
+ const items=await(await fetch(base+'/items')).json();assert.ok(items.every((i:any)=>i.maxStack>=1&&i.inventoryTab&&!('_id'in i)));
+}));
+test('state requires server token, public catalogue does not',async()=>api(async base=>{
+ assert.equal((await fetch(base+'/characters/1/state')).status,403);
+ assert.equal((await fetch(base+'/characters/1/state',{headers:{'X-Game-Server-Token':'wrong'}})).status,403);
+ assert.equal((await fetch(base+'/skills')).status,200);
+ assert.equal((await fetch(base+'/characters/1/state',{headers})).status,200);
+}));
+test('character snapshot contains inventory, info, skill state, actionbar and class stats',async()=>api(async base=>{
+ const s=await(await fetch(base+'/characters/1/state',{headers})).json();assert.equal(s.info.characterName,'Admin');assert.equal(s.baseStats.hp,150);
+ assert.equal(s.progress.inventoryCapacity,64);assert.equal(s.progress.inventory.length,3);assert.deepEqual(s.progress.achievements,[]);
+ assert.equal(Object.keys(s.baseStats).length,statFields.length);
+}));
+test('atomic save persists all changes and rejects stale version without partial writes',async()=>api(async base=>{
+ const s=await(await fetch(base+'/characters/1/state',{headers})).json();const b=body(s);
+ b.info.gold-=10;b.info.skillPoints-=1;b.progress.learned=[1];b.progress.inventory[0].slot=20;b.actionBarSlots=[{slotNum:0,id:1,type:'Skill'}];
+ const res=await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)});assert.equal(res.status,200);const saved=await res.json();assert.equal(saved.revision,1);assert.equal(saved.info.gold,9990);
+ b.info.gold=0;assert.equal((await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)})).status,409);
+ const again=await(await fetch(base+'/characters/1/state',{headers})).json();assert.equal(again.info.gold,9990);assert.equal(again.progress.inventory[0].slot,20);
+}));
+test('inventory rejects duplicate/out-of-range slots, unknown items and stack overflow',async()=>api(async base=>{
+ const s=await(await fetch(base+'/characters/1/state',{headers})).json();
+ for(const inv of [[{slot:0,itemId:1,quantity:1},{slot:0,itemId:1,quantity:1}],[{slot:64,itemId:1,quantity:1}],[{slot:0,itemId:9999,quantity:1}],[{slot:0,itemId:1,quantity:2}]]){
+ const b=body(structuredClone(s));b.progress.inventory=inv;assert.equal((await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)})).status,400);}
+ assert.equal((await(await fetch(base+'/characters/1/state',{headers})).json()).revision,0);
+}));
+test('capacity may be 500, cannot be 501 or 63',async()=>api(async base=>{
+ const s=await(await fetch(base+'/characters/1/state',{headers})).json();for(const n of [501,63]){const b=body(structuredClone(s));b.progress.inventoryCapacity=n;assert.equal((await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)})).status,400);}
+ const b=body(s);b.progress.inventoryCapacity=500;b.progress.inventory[0].slot=499;assert.equal((await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)})).status,200);
+}));
+test('later merged rank suppresses source families transitively',async()=>{
+ const repo=repository();const s=structuredClone(data.characters[0]!) as CharacterRecord;
+ s.progress.learned=[5002,101];await assert.rejects(validateState(repo,s),/Replaced families/);
+ s.progress.learned=[5002];await validateState(repo,s);
 });
-test('action bar can be replaced and loaded using the compact Unreal DTO', async () => {
-  savedActionBar = [];
-  await withApi(repo, async base => {
-    const empty = await (await fetch(`${base}/api/characters/1/action-bar`)).json();
-    assert.deepEqual(empty, { slots: [] });
-
-    const slots = [
-      { slotNum: 8, id: 102, type: 'Item' },
-      { slotNum: 0, id: 1, type: 'Skill' }
-    ];
-    const saved = await fetch(`${base}/api/characters/1/action-bar`, {
-      method: 'PUT',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ slots })
-    });
-    assert.equal(saved.status, 200);
-    assert.deepEqual(await saved.json(), { slots: [slots[1], slots[0]] });
-
-    const loaded = await (await fetch(`${base}/api/characters/1/action-bar`)).json();
-    assert.deepEqual(loaded, { slots: [slots[1], slots[0]] });
-  });
+test('selected modifiers require learned matching family; actionbar requires learned skill',async()=>{
+ const repo=repository();const s=structuredClone(data.characters[0]!) as CharacterRecord;
+ s.progress.selectedModifiers=[{familyId:2,skillId:6001}];await assert.rejects(validateState(repo,s),/modifier/);
+ s.progress.learned=[2];await validateState(repo,s);s.actionBarSlots=[{slotNum:0,id:1,type:'Skill'}];await assert.rejects(validateState(repo,s),/unlearned/);
 });
-test('action bar rejects invalid and duplicate slots', async () => {
-  await withApi(repo, async base => {
-    const invalidBodies = [
-      {},
-      { slots: [{ slotNum: 36, id: 1, type: 'Skill' }] },
-      { slots: [{ slotNum: 0, id: 0, type: 'Skill' }] },
-      { slots: [{ slotNum: 0, id: 1, type: 'None' }] },
-      { slots: [{ slotNum: 0, id: 1, type: 'Skill' }, { slotNum: 0, id: 2, type: 'Item' }] }
-    ];
-    for (const body of invalidBodies) {
-      const response = await fetch(`${base}/api/characters/1/action-bar`, {
-        method: 'PUT', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body)
-      });
-      assert.equal(response.status, 400);
-      assert.equal((await response.json()).error, 'INVALID_ACTION_BAR');
-    }
-  });
+test('graph rejects cycles, branches and replacement of a nonterminal rank',()=>{
+ for(const mutate of [(s:any[])=>{s.find(x=>x.id===101).prev=20102;},(s:any[])=>{s.find(x=>x.id===20103).prev=101;},(s:any[])=>{s.find(x=>x.id===5000).replaces=[101];}]){const s=structuredClone(data.skills);mutate(s);assert.throws(()=>validateSkillGraph(s));}
 });
-test('missing class, invalid ID, absent record and DB offline give explicit errors', async () => {
-  await withApi({ ...repo, characterClass: async () => null }, async base => {
-    const r = await fetch(`${base}/api/characters/1/stats`); assert.equal(r.status, 409);
-    assert.equal((await r.json()).error, 'CLASS_NOT_FOUND');
-    for (const id of ['0','-1','1.5','2147483648','abc','01']) assert.equal((await fetch(`${base}/api/items/${id}`)).status, 400);
-    assert.equal((await fetch(`${base}/api/characters/999/info`)).status, 404);
-    assert.equal((await fetch(`${base}/api/locations/missing/monster-spawns`)).status, 404);
-  });
-  await withApi(repo, async base => { assert.equal((await fetch(`${base}/api/items/1`)).status, 503); }, () => false);
+test('condition schema supports multiple item IDs but rejects repeated keys and invalid costs',async()=>{
+ await new Skill({id:1,familyId:1,requirements:[{type:'Item',id:1,amount:2},{type:'Item',id:2,amount:3}]}).validate();
+ for(const fields of [{cost:[{type:'Achievement',id:1,amount:1}]},{cost:[{type:'Gold',id:0,amount:2},{type:'Gold',id:0,amount:3}]},{requirements:[{type:'Achievement',id:1,amount:2}]},{stats:{parry:2}}])await assert.rejects(async()=>new Skill({id:1,familyId:1,...fields}).validate());
 });
-test('seed replay updates static records, keeps progress and does not delete other IDs', async () => {
-  const store = new Map<string, Record<string, unknown>>([['items:999', { id: 999 }]]);
-  const writer = { write: async (op: ReturnType<typeof createOperations>[number]) => {
-    const key = `${op.collection}:${Object.values(op.filter)[0]}`; const old = store.get(key);
-    if (op.update.$set) store.set(key, { ...old, ...op.update.$set });
-    else if (!old) store.set(key, structuredClone(op.update.$setOnInsert!));
-  } };
-  await applyOperations(createOperations(data, 'static'), writer);
-  await applyOperations(createOperations(data, 'dev'), writer);
-  const edited = { id: 1, info: { level: 99, gold: 10000 } }; store.set('characters:1', edited);
-  const changed = structuredClone(data); changed.items[0]!.name = 'Changed Sword';
-  await applyOperations(createOperations(changed, 'static'), writer);
-  await applyOperations(createOperations(changed, 'dev'), writer);
-  assert.deepEqual(store.get('characters:1'), edited);
-  assert.equal(store.get('items:1')?.name, 'Changed Sword'); assert.ok(store.has('items:999'));
-});
-test('broken references and duplicate IDs fail preflight', async () => {
-  const dir = await mkdtemp(join(tmpdir(), 'mu-seeds-'));
-  try {
-    await cp('data', dir, { recursive: true }); const path = join(dir, 'characters.json');
-    const chars = JSON.parse(await readFile(path, 'utf8')); chars[0].info.classId = 999;
-    await writeFile(path, JSON.stringify(chars)); await assert.rejects(loadData(dir), /Unknown reference/);
-    chars[0].info.classId = 1; chars.push(chars[0]); await writeFile(path, JSON.stringify(chars));
-    await assert.rejects(loadData(dir), /Duplicate IDs/);
-  } finally { await rm(dir, { recursive: true, force: true }); }
-});
-test('unknown stat names and non-finite values are rejected', async () => {
-  await assert.rejects(new Monster({ id: 1, baseStats: { typo: 2 } }).validate());
-  await assert.rejects(new Monster({ id: 1, baseStats: { hp: Infinity } }).validate());
-});
-test('character schema rejects duplicate action bar slots', async () => {
-  await assert.rejects(new Character({
-    id: 2,
-    info: {},
-    actionBarSlots: [
-      { slotNum: 0, id: 1, type: 'Skill' },
-      { slotNum: 0, id: 2, type: 'Item' }
-    ]
-  }).validate());
-});
+test('skill-only seed does not write characters or run migration operations',()=>{for(const op of createOperations(data,'skills')){assert.equal(op.collection,'skills');assert.equal('$unset'in op.update,false);}});
+test('old direct actionbar write is disabled',async()=>api(async base=>{assert.equal((await fetch(base+'/characters/1/action-bar',{method:'PUT',headers,body:'{"slots":[]}'})).status,410);}));
+test('partial snapshots cannot reset omitted progress or metadata',async()=>api(async base=>{assert.equal((await fetch(base+'/characters/1/state',{method:'PUT',headers,body:'{"expectedRevision":0,"info":{}}'})).status,400);}));

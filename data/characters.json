@@ -5,8 +5,8 @@
       "level": 1,
       "experience": 0,
       "classId": 1,
-      "skillPoints": 0,
-      "gold": 0,
+      "skillPoints": 100,
+      "gold": 10000,
       "reputation": 0,
       "characterName": "Admin",
       "characterTitle": "",
@@ -15,6 +15,56 @@
       "alliance": "",
       "race": "",
       "faction": ""
+    },
+    "revision": 0,
+    "actionBarSlots": [],
+    "progress": {
+      "inventoryCapacity": 64,
+      "inventory": [
+        {
+          "slot": 0,
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "slot": 1,
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "slot": 2,
+          "itemId": 3,
+          "quantity": 1
+        }
+      ],
+      "achievements": [],
+      "accessible": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        5000
+      ],
+      "learned": [],
+      "selectedModifiers": []
     }
   }
 ]
