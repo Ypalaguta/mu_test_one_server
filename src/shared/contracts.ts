@@ -1,3 +1,5 @@
+import type { EquipmentSlot } from '../modules/items/types.js';
+import type { AccountRecord, SessionRecord } from '../modules/accounts/types.js';
 import type { InferSchemaType } from 'mongoose';
 import type { infoSchema } from './schemas.js';
 import type { Stats } from './statFields.js';
@@ -8,8 +10,8 @@ import type { ActionBarSlot } from '../modules/action-bar/model.js';
 export type Info = InferSchemaType<typeof infoSchema>;
 export interface EntityRecord { id: number; info: Info }
 export interface InventoryStack { slot: number; itemId: number; quantity: number }
-export interface Progress { inventoryCapacity: number; inventory: InventoryStack[]; achievements: number[]; accessible: number[]; learned: number[]; selectedModifiers: {familyId:number;skillId:number}[] }
-export interface CharacterRecord extends EntityRecord { revision: number; progress: Progress; actionBarSlots: ActionBarSlot[] }
+export interface Progress { inventoryCapacity: number; inventory: InventoryStack[]; equipment: { slot: EquipmentSlot; itemId: number }[]; achievements: number[]; accessible: number[]; learned: number[]; selectedModifiers: {familyId:number;skillId:number}[] }
+export interface CharacterRecord extends EntityRecord { accountId: number; isActive: boolean; isMain: boolean; aiSettings: { allowedSkillIds: number[] }; revision: number; progress: Progress; actionBarSlots: ActionBarSlot[] }
 export interface ActionBarRecord { actionBarSlots: ActionBarSlot[] }
 export interface StatsResponse { baseStats: Stats; growthStats: Stats }
 export interface MonsterRecord extends EntityRecord, StatsResponse {}
@@ -24,6 +26,13 @@ export interface Camp {
 }
 export interface LocationRecord { locationId: string; camps: Camp[] }
 export interface Repository {
+  account?(id: number): Promise<AccountRecord | null>;
+  accountByLogin?(login: string): Promise<AccountRecord | null>;
+  accountCharacters?(id: number): Promise<CharacterRecord[]>;
+  createSession?(value: SessionRecord): Promise<void>;
+  sessionByHash?(hash: string): Promise<SessionRecord | null>;
+  deleteSession?(hash: string): Promise<void>;
+  createAccountWithCharacter?(login: string, passwordHash: string, characterName: string, classId: number): Promise<AccountRecord>;
   saveState(id: number, expectedRevision: number, value: CharacterRecord): Promise<CharacterRecord | null>;
   items(): Promise<ItemRecord[]>;
   character(id: number): Promise<CharacterRecord | null>;

@@ -64,7 +64,14 @@
         5000
       ],
       "learned": [],
-      "selectedModifiers": []
+      "selectedModifiers": [],
+      "equipment": []
+    },
+    "accountId": 1,
+    "isActive": true,
+    "isMain": true,
+    "aiSettings": {
+      "allowedSkillIds": []
     }
   }
 ]

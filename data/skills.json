@@ -31,7 +31,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "meleeAttackFlat": 20
+      "meleeAttackFlat": 20,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -85,7 +92,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "meleeAttackFlat": 24
+      "meleeAttackFlat": 24,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -139,7 +153,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "meleeAttackFlat": 28
+      "meleeAttackFlat": 28,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -194,7 +215,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicFireFlat": 40
+      "magicFireFlat": 40,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -249,7 +277,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicFireFlat": 48
+      "magicFireFlat": 48,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -304,7 +339,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicFireFlat": 56
+      "magicFireFlat": 56,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -359,7 +401,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackFlat": 16,
-      "aoe": 250
+      "aoe": 250,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -414,7 +463,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackFlat": 19,
-      "aoe": 250
+      "aoe": 250,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -469,7 +525,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackFlat": 22,
-      "aoe": 250
+      "aoe": 250,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -524,7 +587,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackFlat": 40,
-      "meleePenetration": 5
+      "meleePenetration": 5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -579,7 +649,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackFlat": 48,
-      "meleePenetration": 5
+      "meleePenetration": 5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -634,7 +711,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackFlat": 56,
-      "meleePenetration": 5
+      "meleePenetration": 5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -690,7 +774,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackFlat": 15,
-      "aoe": 150
+      "aoe": 150,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -746,7 +837,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackFlat": 18,
-      "aoe": 150
+      "aoe": 150,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -802,7 +900,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackFlat": 21,
-      "aoe": 150
+      "aoe": 150,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -853,7 +958,15 @@
     "level": 1,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -903,7 +1016,15 @@
     "level": 2,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -953,7 +1074,15 @@
     "level": 3,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -1007,7 +1136,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "aoe": 350,
-      "magicColdFlat": 25
+      "magicColdFlat": 25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1062,7 +1198,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "aoe": 350,
-      "magicColdFlat": 30
+      "magicColdFlat": 30,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1117,7 +1260,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "aoe": 350,
-      "magicColdFlat": 35
+      "magicColdFlat": 35,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1172,7 +1322,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicFireFlat": 12,
-      "aoe": 300
+      "aoe": 300,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1227,7 +1384,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicFireFlat": 14,
-      "aoe": 300
+      "aoe": 300,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1282,7 +1446,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicFireFlat": 16,
-      "aoe": 300
+      "aoe": 300,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1334,7 +1505,14 @@
     "stats": {
       "castSpeedInc": 2.0,
       "mp": 20,
-      "mpRegen": 1.0
+      "mpRegen": 1.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1386,7 +1564,14 @@
     "stats": {
       "castSpeedInc": 2.5,
       "mp": 25,
-      "mpRegen": 1.2
+      "mpRegen": 1.2,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1438,7 +1623,14 @@
     "stats": {
       "castSpeedInc": 3.0,
       "mp": 30,
-      "mpRegen": 1.4
+      "mpRegen": 1.4,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1490,7 +1682,14 @@
     "stats": {
       "castSpeedInc": 3.5,
       "mp": 35,
-      "mpRegen": 1.6
+      "mpRegen": 1.6,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1542,7 +1741,14 @@
     "stats": {
       "castSpeedInc": 4.0,
       "mp": 40,
-      "mpRegen": 1.8
+      "mpRegen": 1.8,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1594,7 +1800,14 @@
     "stats": {
       "castSpeedInc": 4.5,
       "mp": 45,
-      "mpRegen": 2.0
+      "mpRegen": 2.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1646,7 +1859,14 @@
     "stats": {
       "castSpeedInc": 5.0,
       "mp": 50,
-      "mpRegen": 2.2
+      "mpRegen": 2.2,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1698,7 +1918,14 @@
     "stats": {
       "castSpeedInc": 5.5,
       "mp": 55,
-      "mpRegen": 2.4000000000000004
+      "mpRegen": 2.4000000000000004,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1750,7 +1977,14 @@
     "stats": {
       "castSpeedInc": 6.0,
       "mp": 60,
-      "mpRegen": 2.6
+      "mpRegen": 2.6,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1802,7 +2036,14 @@
     "stats": {
       "castSpeedInc": 6.5,
       "mp": 65,
-      "mpRegen": 2.8
+      "mpRegen": 2.8,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1854,7 +2095,14 @@
     "stats": {
       "castSpeedInc": 7.0,
       "mp": 70,
-      "mpRegen": 3.0
+      "mpRegen": 3.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1906,7 +2154,14 @@
     "stats": {
       "castSpeedInc": 7.5,
       "mp": 75,
-      "mpRegen": 3.2
+      "mpRegen": 3.2,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -1958,7 +2213,14 @@
     "stats": {
       "castSpeedInc": 8.0,
       "mp": 80,
-      "mpRegen": 3.4000000000000004
+      "mpRegen": 3.4000000000000004,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2010,7 +2272,14 @@
     "stats": {
       "castSpeedInc": 8.5,
       "mp": 85,
-      "mpRegen": 3.6
+      "mpRegen": 3.6,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2062,7 +2331,14 @@
     "stats": {
       "castSpeedInc": 9.0,
       "mp": 90,
-      "mpRegen": 3.8000000000000003
+      "mpRegen": 3.8000000000000003,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2114,7 +2390,14 @@
     "stats": {
       "castSpeedInc": 9.5,
       "mp": 95,
-      "mpRegen": 4.0
+      "mpRegen": 4.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2166,7 +2449,14 @@
     "stats": {
       "castSpeedInc": 10.0,
       "mp": 100,
-      "mpRegen": 4.2
+      "mpRegen": 4.2,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2218,7 +2508,14 @@
     "stats": {
       "castSpeedInc": 10.5,
       "mp": 105,
-      "mpRegen": 4.4
+      "mpRegen": 4.4,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2270,7 +2567,14 @@
     "stats": {
       "castSpeedInc": 11.0,
       "mp": 110,
-      "mpRegen": 4.6
+      "mpRegen": 4.6,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2322,7 +2626,14 @@
     "stats": {
       "castSpeedInc": 11.5,
       "mp": 115,
-      "mpRegen": 4.800000000000001
+      "mpRegen": 4.800000000000001,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2374,7 +2685,14 @@
     "stats": {
       "castSpeedInc": 12.0,
       "mp": 120,
-      "mpRegen": 5.0
+      "mpRegen": 5.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2426,7 +2744,14 @@
     "stats": {
       "castSpeedInc": 12.5,
       "mp": 125,
-      "mpRegen": 5.2
+      "mpRegen": 5.2,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2478,7 +2803,14 @@
     "stats": {
       "castSpeedInc": 13.0,
       "mp": 130,
-      "mpRegen": 5.4
+      "mpRegen": 5.4,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2530,7 +2862,14 @@
     "stats": {
       "castSpeedInc": 13.5,
       "mp": 135,
-      "mpRegen": 5.6000000000000005
+      "mpRegen": 5.6000000000000005,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2582,7 +2921,14 @@
     "stats": {
       "castSpeedInc": 14.0,
       "mp": 140,
-      "mpRegen": 5.800000000000001
+      "mpRegen": 5.800000000000001,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2634,7 +2980,14 @@
     "stats": {
       "castSpeedInc": 14.5,
       "mp": 145,
-      "mpRegen": 6.0
+      "mpRegen": 6.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2686,7 +3039,14 @@
     "stats": {
       "castSpeedInc": 15.0,
       "mp": 150,
-      "mpRegen": 6.2
+      "mpRegen": 6.2,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2738,7 +3098,14 @@
     "stats": {
       "castSpeedInc": 15.5,
       "mp": 155,
-      "mpRegen": 6.4
+      "mpRegen": 6.4,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2790,7 +3157,14 @@
     "stats": {
       "castSpeedInc": 16.0,
       "mp": 160,
-      "mpRegen": 6.6000000000000005
+      "mpRegen": 6.6000000000000005,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2842,7 +3216,14 @@
     "stats": {
       "castSpeedInc": 16.5,
       "mp": 165,
-      "mpRegen": 6.800000000000001
+      "mpRegen": 6.800000000000001,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2893,7 +3274,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 2.0,
-      "evasion": 3.0
+      "evasion": 3.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2944,7 +3332,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 2.5,
-      "evasion": 3.5
+      "evasion": 3.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -2995,7 +3390,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 3.0,
-      "evasion": 4.0
+      "evasion": 4.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3046,7 +3448,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 3.5,
-      "evasion": 4.5
+      "evasion": 4.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3097,7 +3506,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 4.0,
-      "evasion": 5.0
+      "evasion": 5.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3148,7 +3564,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 4.5,
-      "evasion": 5.5
+      "evasion": 5.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3199,7 +3622,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 5.0,
-      "evasion": 6.0
+      "evasion": 6.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3250,7 +3680,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 5.5,
-      "evasion": 6.5
+      "evasion": 6.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3301,7 +3738,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 6.0,
-      "evasion": 7.0
+      "evasion": 7.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3352,7 +3796,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 6.5,
-      "evasion": 7.5
+      "evasion": 7.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3403,7 +3854,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 7.0,
-      "evasion": 8.0
+      "evasion": 8.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3454,7 +3912,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 7.5,
-      "evasion": 8.5
+      "evasion": 8.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3505,7 +3970,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 8.0,
-      "evasion": 9.0
+      "evasion": 9.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3556,7 +4028,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 8.5,
-      "evasion": 9.5
+      "evasion": 9.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3607,7 +4086,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 9.0,
-      "evasion": 10.0
+      "evasion": 10.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3658,7 +4144,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 9.5,
-      "evasion": 10.5
+      "evasion": 10.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3709,7 +4202,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 10.0,
-      "evasion": 11.0
+      "evasion": 11.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3760,7 +4260,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 10.5,
-      "evasion": 11.5
+      "evasion": 11.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3811,7 +4318,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 11.0,
-      "evasion": 12.0
+      "evasion": 12.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3862,7 +4376,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 11.5,
-      "evasion": 12.5
+      "evasion": 12.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3913,7 +4434,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 12.0,
-      "evasion": 13.0
+      "evasion": 13.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -3964,7 +4492,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 12.5,
-      "evasion": 13.5
+      "evasion": 13.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4015,7 +4550,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 13.0,
-      "evasion": 14.0
+      "evasion": 14.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4066,7 +4608,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 13.5,
-      "evasion": 14.5
+      "evasion": 14.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4117,7 +4666,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 14.0,
-      "evasion": 15.0
+      "evasion": 15.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4168,7 +4724,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 14.5,
-      "evasion": 15.5
+      "evasion": 15.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4219,7 +4782,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 15.0,
-      "evasion": 16.0
+      "evasion": 16.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4270,7 +4840,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 15.5,
-      "evasion": 16.5
+      "evasion": 16.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4321,7 +4898,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 16.0,
-      "evasion": 17.0
+      "evasion": 17.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4372,7 +4956,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackSpeedInc": 16.5,
-      "evasion": 17.5
+      "evasion": 17.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4423,7 +5014,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 20,
-      "armor": 20
+      "armor": 20,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4474,7 +5072,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 25,
-      "armor": 25
+      "armor": 25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4525,7 +5130,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 30,
-      "armor": 30
+      "armor": 30,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4576,7 +5188,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 35,
-      "armor": 35
+      "armor": 35,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4627,7 +5246,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 40,
-      "armor": 40
+      "armor": 40,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4678,7 +5304,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 45,
-      "armor": 45
+      "armor": 45,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4729,7 +5362,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 50,
-      "armor": 50
+      "armor": 50,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4780,7 +5420,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 55,
-      "armor": 55
+      "armor": 55,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4831,7 +5478,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 60,
-      "armor": 60
+      "armor": 60,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4882,7 +5536,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 65,
-      "armor": 65
+      "armor": 65,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4933,7 +5594,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 70,
-      "armor": 70
+      "armor": 70,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -4984,7 +5652,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 75,
-      "armor": 75
+      "armor": 75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5035,7 +5710,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 80,
-      "armor": 80
+      "armor": 80,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5086,7 +5768,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 85,
-      "armor": 85
+      "armor": 85,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5137,7 +5826,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 90,
-      "armor": 90
+      "armor": 90,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5188,7 +5884,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 95,
-      "armor": 95
+      "armor": 95,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5239,7 +5942,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 100,
-      "armor": 100
+      "armor": 100,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5290,7 +6000,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 105,
-      "armor": 105
+      "armor": 105,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5341,7 +6058,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 110,
-      "armor": 110
+      "armor": 110,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5392,7 +6116,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 115,
-      "armor": 115
+      "armor": 115,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5443,7 +6174,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 120,
-      "armor": 120
+      "armor": 120,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5494,7 +6232,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 125,
-      "armor": 125
+      "armor": 125,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5545,7 +6290,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 130,
-      "armor": 130
+      "armor": 130,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5596,7 +6348,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 135,
-      "armor": 135
+      "armor": 135,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5647,7 +6406,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 140,
-      "armor": 140
+      "armor": 140,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5698,7 +6464,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 145,
-      "armor": 145
+      "armor": 145,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5749,7 +6522,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 150,
-      "armor": 150
+      "armor": 150,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5800,7 +6580,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 155,
-      "armor": 155
+      "armor": 155,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5851,7 +6638,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 160,
-      "armor": 160
+      "armor": 160,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5902,7 +6696,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "hp": 165,
-      "armor": 165
+      "armor": 165,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -5953,7 +6754,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 3,
-      "meleeAttackInc": 4
+      "meleeAttackInc": 4,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6004,7 +6812,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 4,
-      "meleeAttackInc": 5
+      "meleeAttackInc": 5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6055,7 +6870,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 5,
-      "meleeAttackInc": 6
+      "meleeAttackInc": 6,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6106,7 +6928,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 6,
-      "meleeAttackInc": 7
+      "meleeAttackInc": 7,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6157,7 +6986,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 7,
-      "meleeAttackInc": 8
+      "meleeAttackInc": 8,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6208,7 +7044,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 8,
-      "meleeAttackInc": 9
+      "meleeAttackInc": 9,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6259,7 +7102,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 9,
-      "meleeAttackInc": 10
+      "meleeAttackInc": 10,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6310,7 +7160,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 10,
-      "meleeAttackInc": 11
+      "meleeAttackInc": 11,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6361,7 +7218,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 11,
-      "meleeAttackInc": 12
+      "meleeAttackInc": 12,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6412,7 +7276,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 12,
-      "meleeAttackInc": 13
+      "meleeAttackInc": 13,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6463,7 +7334,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 13,
-      "meleeAttackInc": 14
+      "meleeAttackInc": 14,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6514,7 +7392,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 14,
-      "meleeAttackInc": 15
+      "meleeAttackInc": 15,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6565,7 +7450,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 15,
-      "meleeAttackInc": 16
+      "meleeAttackInc": 16,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6616,7 +7508,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 16,
-      "meleeAttackInc": 17
+      "meleeAttackInc": 17,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6667,7 +7566,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 17,
-      "meleeAttackInc": 18
+      "meleeAttackInc": 18,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6718,7 +7624,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 18,
-      "meleeAttackInc": 19
+      "meleeAttackInc": 19,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6769,7 +7682,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 19,
-      "meleeAttackInc": 20
+      "meleeAttackInc": 20,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6820,7 +7740,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 20,
-      "meleeAttackInc": 21
+      "meleeAttackInc": 21,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6871,7 +7798,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 21,
-      "meleeAttackInc": 22
+      "meleeAttackInc": 22,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6922,7 +7856,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 22,
-      "meleeAttackInc": 23
+      "meleeAttackInc": 23,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -6973,7 +7914,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 23,
-      "meleeAttackInc": 24
+      "meleeAttackInc": 24,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7024,7 +7972,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 24,
-      "meleeAttackInc": 25
+      "meleeAttackInc": 25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7075,7 +8030,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 25,
-      "meleeAttackInc": 26
+      "meleeAttackInc": 26,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7126,7 +8088,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 26,
-      "meleeAttackInc": 27
+      "meleeAttackInc": 27,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7177,7 +8146,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 27,
-      "meleeAttackInc": 28
+      "meleeAttackInc": 28,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7228,7 +8204,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 28,
-      "meleeAttackInc": 29
+      "meleeAttackInc": 29,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7279,7 +8262,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 29,
-      "meleeAttackInc": 30
+      "meleeAttackInc": 30,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7330,7 +8320,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 30,
-      "meleeAttackInc": 31
+      "meleeAttackInc": 31,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7381,7 +8378,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 31,
-      "meleeAttackInc": 32
+      "meleeAttackInc": 32,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7432,7 +8436,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAccuracyInc": 32,
-      "meleeAttackInc": 33
+      "meleeAttackInc": 33,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7483,7 +8494,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 4,
-      "meleePenetration": 2.0
+      "meleePenetration": 2.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7534,7 +8552,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 5,
-      "meleePenetration": 2.5
+      "meleePenetration": 2.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7585,7 +8610,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 6,
-      "meleePenetration": 3.0
+      "meleePenetration": 3.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7636,7 +8668,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 7,
-      "meleePenetration": 3.5
+      "meleePenetration": 3.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7687,7 +8726,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 8,
-      "meleePenetration": 4.0
+      "meleePenetration": 4.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7738,7 +8784,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 9,
-      "meleePenetration": 4.5
+      "meleePenetration": 4.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7789,7 +8842,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 10,
-      "meleePenetration": 5.0
+      "meleePenetration": 5.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7840,7 +8900,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 11,
-      "meleePenetration": 5.5
+      "meleePenetration": 5.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7891,7 +8958,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 12,
-      "meleePenetration": 6.0
+      "meleePenetration": 6.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7942,7 +9016,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 13,
-      "meleePenetration": 6.5
+      "meleePenetration": 6.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -7993,7 +9074,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 14,
-      "meleePenetration": 7.0
+      "meleePenetration": 7.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8044,7 +9132,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 15,
-      "meleePenetration": 7.5
+      "meleePenetration": 7.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8095,7 +9190,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 16,
-      "meleePenetration": 8.0
+      "meleePenetration": 8.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8146,7 +9248,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 17,
-      "meleePenetration": 8.5
+      "meleePenetration": 8.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8197,7 +9306,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 18,
-      "meleePenetration": 9.0
+      "meleePenetration": 9.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8248,7 +9364,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 19,
-      "meleePenetration": 9.5
+      "meleePenetration": 9.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8299,7 +9422,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 20,
-      "meleePenetration": 10.0
+      "meleePenetration": 10.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8350,7 +9480,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 21,
-      "meleePenetration": 10.5
+      "meleePenetration": 10.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8401,7 +9538,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 22,
-      "meleePenetration": 11.0
+      "meleePenetration": 11.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8452,7 +9596,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 23,
-      "meleePenetration": 11.5
+      "meleePenetration": 11.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8503,7 +9654,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 24,
-      "meleePenetration": 12.0
+      "meleePenetration": 12.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8554,7 +9712,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 25,
-      "meleePenetration": 12.5
+      "meleePenetration": 12.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8605,7 +9770,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 26,
-      "meleePenetration": 13.0
+      "meleePenetration": 13.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8656,7 +9828,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 27,
-      "meleePenetration": 13.5
+      "meleePenetration": 13.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8707,7 +9886,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 28,
-      "meleePenetration": 14.0
+      "meleePenetration": 14.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8758,7 +9944,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 29,
-      "meleePenetration": 14.5
+      "meleePenetration": 14.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8809,7 +10002,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 30,
-      "meleePenetration": 15.0
+      "meleePenetration": 15.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8860,7 +10060,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 31,
-      "meleePenetration": 15.5
+      "meleePenetration": 15.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8911,7 +10118,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 32,
-      "meleePenetration": 16.0
+      "meleePenetration": 16.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -8962,7 +10176,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 33,
-      "meleePenetration": 16.5
+      "meleePenetration": 16.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9013,7 +10234,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 6.0,
-      "critDamage": 5
+      "critDamage": 5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9064,7 +10292,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 7.5,
-      "critDamage": 6
+      "critDamage": 6,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9115,7 +10350,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 9.0,
-      "critDamage": 7
+      "critDamage": 7,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9166,7 +10408,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 10.5,
-      "critDamage": 8
+      "critDamage": 8,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9217,7 +10466,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 12.0,
-      "critDamage": 9
+      "critDamage": 9,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9268,7 +10524,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 13.5,
-      "critDamage": 10
+      "critDamage": 10,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9319,7 +10582,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 15.0,
-      "critDamage": 11
+      "critDamage": 11,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9370,7 +10640,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 16.5,
-      "critDamage": 12
+      "critDamage": 12,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9421,7 +10698,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 18.0,
-      "critDamage": 13
+      "critDamage": 13,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9472,7 +10756,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 19.5,
-      "critDamage": 14
+      "critDamage": 14,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9523,7 +10814,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 21.0,
-      "critDamage": 15
+      "critDamage": 15,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9574,7 +10872,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 22.5,
-      "critDamage": 16
+      "critDamage": 16,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9625,7 +10930,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 24.0,
-      "critDamage": 17
+      "critDamage": 17,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9676,7 +10988,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 25.5,
-      "critDamage": 18
+      "critDamage": 18,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9727,7 +11046,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 27.0,
-      "critDamage": 19
+      "critDamage": 19,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9778,7 +11104,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 28.5,
-      "critDamage": 20
+      "critDamage": 20,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9829,7 +11162,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 30.0,
-      "critDamage": 21
+      "critDamage": 21,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9880,7 +11220,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 31.5,
-      "critDamage": 22
+      "critDamage": 22,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9931,7 +11278,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 33.0,
-      "critDamage": 23
+      "critDamage": 23,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -9982,7 +11336,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 34.5,
-      "critDamage": 24
+      "critDamage": 24,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10033,7 +11394,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 36.0,
-      "critDamage": 25
+      "critDamage": 25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10084,7 +11452,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 37.5,
-      "critDamage": 26
+      "critDamage": 26,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10135,7 +11510,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 39.0,
-      "critDamage": 27
+      "critDamage": 27,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10186,7 +11568,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 40.5,
-      "critDamage": 28
+      "critDamage": 28,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10237,7 +11626,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 42.0,
-      "critDamage": 29
+      "critDamage": 29,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10288,7 +11684,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 43.5,
-      "critDamage": 30
+      "critDamage": 30,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10339,7 +11742,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 45.0,
-      "critDamage": 31
+      "critDamage": 31,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10390,7 +11800,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 46.5,
-      "critDamage": 32
+      "critDamage": 32,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10441,7 +11858,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 48.0,
-      "critDamage": 33
+      "critDamage": 33,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10492,7 +11916,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "meleeAttackInc": 49.5,
-      "critDamage": 34
+      "critDamage": 34,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10543,7 +11974,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 4,
-      "castSpeedInc": 2.0
+      "castSpeedInc": 2.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10594,7 +12032,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 5,
-      "castSpeedInc": 2.5
+      "castSpeedInc": 2.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10645,7 +12090,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 6,
-      "castSpeedInc": 3.0
+      "castSpeedInc": 3.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10696,7 +12148,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 7,
-      "castSpeedInc": 3.5
+      "castSpeedInc": 3.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10747,7 +12206,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 8,
-      "castSpeedInc": 4.0
+      "castSpeedInc": 4.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10798,7 +12264,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 9,
-      "castSpeedInc": 4.5
+      "castSpeedInc": 4.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10849,7 +12322,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 10,
-      "castSpeedInc": 5.0
+      "castSpeedInc": 5.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10900,7 +12380,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 11,
-      "castSpeedInc": 5.5
+      "castSpeedInc": 5.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -10951,7 +12438,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 12,
-      "castSpeedInc": 6.0
+      "castSpeedInc": 6.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11002,7 +12496,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 13,
-      "castSpeedInc": 6.5
+      "castSpeedInc": 6.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11053,7 +12554,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 14,
-      "castSpeedInc": 7.0
+      "castSpeedInc": 7.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11104,7 +12612,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 15,
-      "castSpeedInc": 7.5
+      "castSpeedInc": 7.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11155,7 +12670,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 16,
-      "castSpeedInc": 8.0
+      "castSpeedInc": 8.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11206,7 +12728,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 17,
-      "castSpeedInc": 8.5
+      "castSpeedInc": 8.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11257,7 +12786,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 18,
-      "castSpeedInc": 9.0
+      "castSpeedInc": 9.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11308,7 +12844,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 19,
-      "castSpeedInc": 9.5
+      "castSpeedInc": 9.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11359,7 +12902,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 20,
-      "castSpeedInc": 10.0
+      "castSpeedInc": 10.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11410,7 +12960,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 21,
-      "castSpeedInc": 10.5
+      "castSpeedInc": 10.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11461,7 +13018,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 22,
-      "castSpeedInc": 11.0
+      "castSpeedInc": 11.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11512,7 +13076,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 23,
-      "castSpeedInc": 11.5
+      "castSpeedInc": 11.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11563,7 +13134,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 24,
-      "castSpeedInc": 12.0
+      "castSpeedInc": 12.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11614,7 +13192,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 25,
-      "castSpeedInc": 12.5
+      "castSpeedInc": 12.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11665,7 +13250,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 26,
-      "castSpeedInc": 13.0
+      "castSpeedInc": 13.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11716,7 +13308,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 27,
-      "castSpeedInc": 13.5
+      "castSpeedInc": 13.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11767,7 +13366,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 28,
-      "castSpeedInc": 14.0
+      "castSpeedInc": 14.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11818,7 +13424,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 29,
-      "castSpeedInc": 14.5
+      "castSpeedInc": 14.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11869,7 +13482,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 30,
-      "castSpeedInc": 15.0
+      "castSpeedInc": 15.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11920,7 +13540,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 31,
-      "castSpeedInc": 15.5
+      "castSpeedInc": 15.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -11971,7 +13598,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 32,
-      "castSpeedInc": 16.0
+      "castSpeedInc": 16.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12022,7 +13656,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "spellDamage": 33,
-      "castSpeedInc": 16.5
+      "castSpeedInc": 16.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12073,7 +13714,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 3,
-      "mp": 15
+      "mp": 15,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12124,7 +13772,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 4,
-      "mp": 20
+      "mp": 20,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12175,7 +13830,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 5,
-      "mp": 25
+      "mp": 25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12226,7 +13888,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 6,
-      "mp": 30
+      "mp": 30,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12277,7 +13946,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 7,
-      "mp": 35
+      "mp": 35,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12328,7 +14004,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 8,
-      "mp": 40
+      "mp": 40,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12379,7 +14062,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 9,
-      "mp": 45
+      "mp": 45,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12430,7 +14120,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 10,
-      "mp": 50
+      "mp": 50,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12481,7 +14178,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 11,
-      "mp": 55
+      "mp": 55,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12532,7 +14236,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 12,
-      "mp": 60
+      "mp": 60,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12583,7 +14294,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 13,
-      "mp": 65
+      "mp": 65,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12634,7 +14352,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 14,
-      "mp": 70
+      "mp": 70,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12685,7 +14410,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 15,
-      "mp": 75
+      "mp": 75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12736,7 +14468,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 16,
-      "mp": 80
+      "mp": 80,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12787,7 +14526,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 17,
-      "mp": 85
+      "mp": 85,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12838,7 +14584,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 18,
-      "mp": 90
+      "mp": 90,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12889,7 +14642,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 19,
-      "mp": 95
+      "mp": 95,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12940,7 +14700,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 20,
-      "mp": 100
+      "mp": 100,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -12991,7 +14758,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 21,
-      "mp": 105
+      "mp": 105,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13042,7 +14816,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 22,
-      "mp": 110
+      "mp": 110,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13093,7 +14874,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 23,
-      "mp": 115
+      "mp": 115,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13144,7 +14932,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 24,
-      "mp": 120
+      "mp": 120,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13195,7 +14990,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 25,
-      "mp": 125
+      "mp": 125,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13246,7 +15048,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 26,
-      "mp": 130
+      "mp": 130,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13297,7 +15106,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 27,
-      "mp": 135
+      "mp": 135,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13348,7 +15164,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 28,
-      "mp": 140
+      "mp": 140,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13399,7 +15222,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 29,
-      "mp": 145
+      "mp": 145,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13450,7 +15280,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 30,
-      "mp": 150
+      "mp": 150,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13501,7 +15338,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 31,
-      "mp": 155
+      "mp": 155,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13552,7 +15396,14 @@
     "modifierOfSkill": 0,
     "stats": {
       "magicPenetration": 32,
-      "mp": 160
+      "mp": 160,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13604,7 +15455,14 @@
     "stats": {
       "evasion": 2.0,
       "critChance": 1.0,
-      "meleeAttackSpeedInc": 2.0
+      "meleeAttackSpeedInc": 2.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13656,7 +15514,14 @@
     "stats": {
       "evasion": 2.5,
       "critChance": 1.25,
-      "meleeAttackSpeedInc": 2.5
+      "meleeAttackSpeedInc": 2.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13708,7 +15573,14 @@
     "stats": {
       "evasion": 3.0,
       "critChance": 1.5,
-      "meleeAttackSpeedInc": 3.0
+      "meleeAttackSpeedInc": 3.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13760,7 +15632,14 @@
     "stats": {
       "evasion": 3.5,
       "critChance": 1.75,
-      "meleeAttackSpeedInc": 3.5
+      "meleeAttackSpeedInc": 3.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13812,7 +15691,14 @@
     "stats": {
       "evasion": 4.0,
       "critChance": 2.0,
-      "meleeAttackSpeedInc": 4.0
+      "meleeAttackSpeedInc": 4.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13864,7 +15750,14 @@
     "stats": {
       "evasion": 4.5,
       "critChance": 2.25,
-      "meleeAttackSpeedInc": 4.5
+      "meleeAttackSpeedInc": 4.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13916,7 +15809,14 @@
     "stats": {
       "evasion": 5.0,
       "critChance": 2.5,
-      "meleeAttackSpeedInc": 5.0
+      "meleeAttackSpeedInc": 5.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -13968,7 +15868,14 @@
     "stats": {
       "evasion": 5.5,
       "critChance": 2.75,
-      "meleeAttackSpeedInc": 5.5
+      "meleeAttackSpeedInc": 5.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14020,7 +15927,14 @@
     "stats": {
       "evasion": 6.0,
       "critChance": 3.0,
-      "meleeAttackSpeedInc": 6.0
+      "meleeAttackSpeedInc": 6.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14072,7 +15986,14 @@
     "stats": {
       "evasion": 6.5,
       "critChance": 3.25,
-      "meleeAttackSpeedInc": 6.5
+      "meleeAttackSpeedInc": 6.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14124,7 +16045,14 @@
     "stats": {
       "evasion": 7.0,
       "critChance": 3.5,
-      "meleeAttackSpeedInc": 7.0
+      "meleeAttackSpeedInc": 7.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14176,7 +16104,14 @@
     "stats": {
       "evasion": 7.5,
       "critChance": 3.75,
-      "meleeAttackSpeedInc": 7.5
+      "meleeAttackSpeedInc": 7.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14228,7 +16163,14 @@
     "stats": {
       "evasion": 8.0,
       "critChance": 4.0,
-      "meleeAttackSpeedInc": 8.0
+      "meleeAttackSpeedInc": 8.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14280,7 +16222,14 @@
     "stats": {
       "evasion": 8.5,
       "critChance": 4.25,
-      "meleeAttackSpeedInc": 8.5
+      "meleeAttackSpeedInc": 8.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14332,7 +16281,14 @@
     "stats": {
       "evasion": 9.0,
       "critChance": 4.5,
-      "meleeAttackSpeedInc": 9.0
+      "meleeAttackSpeedInc": 9.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14384,7 +16340,14 @@
     "stats": {
       "evasion": 9.5,
       "critChance": 4.75,
-      "meleeAttackSpeedInc": 9.5
+      "meleeAttackSpeedInc": 9.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14436,7 +16399,14 @@
     "stats": {
       "evasion": 10.0,
       "critChance": 5.0,
-      "meleeAttackSpeedInc": 10.0
+      "meleeAttackSpeedInc": 10.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14488,7 +16458,14 @@
     "stats": {
       "evasion": 10.5,
       "critChance": 5.25,
-      "meleeAttackSpeedInc": 10.5
+      "meleeAttackSpeedInc": 10.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14540,7 +16517,14 @@
     "stats": {
       "evasion": 11.0,
       "critChance": 5.5,
-      "meleeAttackSpeedInc": 11.0
+      "meleeAttackSpeedInc": 11.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14592,7 +16576,14 @@
     "stats": {
       "evasion": 11.5,
       "critChance": 5.75,
-      "meleeAttackSpeedInc": 11.5
+      "meleeAttackSpeedInc": 11.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14644,7 +16635,14 @@
     "stats": {
       "evasion": 12.0,
       "critChance": 6.0,
-      "meleeAttackSpeedInc": 12.0
+      "meleeAttackSpeedInc": 12.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14696,7 +16694,14 @@
     "stats": {
       "evasion": 12.5,
       "critChance": 6.25,
-      "meleeAttackSpeedInc": 12.5
+      "meleeAttackSpeedInc": 12.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14748,7 +16753,14 @@
     "stats": {
       "evasion": 13.0,
       "critChance": 6.5,
-      "meleeAttackSpeedInc": 13.0
+      "meleeAttackSpeedInc": 13.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14800,7 +16812,14 @@
     "stats": {
       "evasion": 13.5,
       "critChance": 6.75,
-      "meleeAttackSpeedInc": 13.5
+      "meleeAttackSpeedInc": 13.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14852,7 +16871,14 @@
     "stats": {
       "evasion": 14.0,
       "critChance": 7.0,
-      "meleeAttackSpeedInc": 14.0
+      "meleeAttackSpeedInc": 14.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14904,7 +16930,14 @@
     "stats": {
       "evasion": 14.5,
       "critChance": 7.25,
-      "meleeAttackSpeedInc": 14.5
+      "meleeAttackSpeedInc": 14.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -14956,7 +16989,14 @@
     "stats": {
       "evasion": 15.0,
       "critChance": 7.5,
-      "meleeAttackSpeedInc": 15.0
+      "meleeAttackSpeedInc": 15.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15008,7 +17048,14 @@
     "stats": {
       "evasion": 15.5,
       "critChance": 7.75,
-      "meleeAttackSpeedInc": 15.5
+      "meleeAttackSpeedInc": 15.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15060,7 +17107,14 @@
     "stats": {
       "evasion": 16.0,
       "critChance": 8.0,
-      "meleeAttackSpeedInc": 16.0
+      "meleeAttackSpeedInc": 16.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15112,7 +17166,14 @@
     "stats": {
       "evasion": 16.5,
       "critChance": 8.25,
-      "meleeAttackSpeedInc": 16.5
+      "meleeAttackSpeedInc": 16.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15162,7 +17223,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 3.0
+      "magicEvasion": 3.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15212,7 +17280,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 3.75
+      "magicEvasion": 3.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15262,7 +17337,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 4.5
+      "magicEvasion": 4.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15312,7 +17394,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 5.25
+      "magicEvasion": 5.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15362,7 +17451,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 6.0
+      "magicEvasion": 6.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15412,7 +17508,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 6.75
+      "magicEvasion": 6.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15462,7 +17565,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 7.5
+      "magicEvasion": 7.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15512,7 +17622,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 8.25
+      "magicEvasion": 8.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15562,7 +17679,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 9.0
+      "magicEvasion": 9.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15612,7 +17736,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 9.75
+      "magicEvasion": 9.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15662,7 +17793,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 10.5
+      "magicEvasion": 10.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15712,7 +17850,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 11.25
+      "magicEvasion": 11.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15762,7 +17907,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 12.0
+      "magicEvasion": 12.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15812,7 +17964,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 12.75
+      "magicEvasion": 12.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15862,7 +18021,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 13.5
+      "magicEvasion": 13.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15912,7 +18078,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 14.25
+      "magicEvasion": 14.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -15962,7 +18135,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 15.0
+      "magicEvasion": 15.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16012,7 +18192,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 15.75
+      "magicEvasion": 15.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16062,7 +18249,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 16.5
+      "magicEvasion": 16.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16112,7 +18306,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 17.25
+      "magicEvasion": 17.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16162,7 +18363,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 18.0
+      "magicEvasion": 18.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16212,7 +18420,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 18.75
+      "magicEvasion": 18.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16262,7 +18477,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 19.5
+      "magicEvasion": 19.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16312,7 +18534,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 20.25
+      "magicEvasion": 20.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16362,7 +18591,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 21.0
+      "magicEvasion": 21.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16412,7 +18648,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 21.75
+      "magicEvasion": 21.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16462,7 +18705,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 22.5
+      "magicEvasion": 22.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16512,7 +18762,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 23.25
+      "magicEvasion": 23.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16562,7 +18819,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 24.0
+      "magicEvasion": 24.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16612,7 +18876,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "magicEvasion": 24.75
+      "magicEvasion": 24.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16662,7 +18933,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 15
+      "armor": 15,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16712,7 +18990,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 20
+      "armor": 20,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16762,7 +19047,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 25
+      "armor": 25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16812,7 +19104,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 30
+      "armor": 30,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16862,7 +19161,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 35
+      "armor": 35,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16912,7 +19218,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 40
+      "armor": 40,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -16962,7 +19275,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 45
+      "armor": 45,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17012,7 +19332,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 50
+      "armor": 50,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17062,7 +19389,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 55
+      "armor": 55,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17112,7 +19446,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 60
+      "armor": 60,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17162,7 +19503,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 65
+      "armor": 65,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17212,7 +19560,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 70
+      "armor": 70,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17262,7 +19617,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 75
+      "armor": 75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17312,7 +19674,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 80
+      "armor": 80,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17362,7 +19731,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 85
+      "armor": 85,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17412,7 +19788,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 90
+      "armor": 90,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17462,7 +19845,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 95
+      "armor": 95,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17512,7 +19902,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 100
+      "armor": 100,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17562,7 +19959,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 105
+      "armor": 105,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17612,7 +20016,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 110
+      "armor": 110,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17662,7 +20073,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 115
+      "armor": 115,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17712,7 +20130,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 120
+      "armor": 120,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17762,7 +20187,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 125
+      "armor": 125,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17812,7 +20244,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 130
+      "armor": 130,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17862,7 +20301,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 135
+      "armor": 135,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17912,7 +20358,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 140
+      "armor": 140,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -17962,7 +20415,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 145
+      "armor": 145,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18012,7 +20472,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 150
+      "armor": 150,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18062,7 +20529,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 155
+      "armor": 155,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18112,7 +20586,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "armor": 160
+      "armor": 160,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18162,7 +20643,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 3.0
+      "physBlock": 3.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18212,7 +20700,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 3.75
+      "physBlock": 3.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18262,7 +20757,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 4.5
+      "physBlock": 4.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18312,7 +20814,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 5.25
+      "physBlock": 5.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18362,7 +20871,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 6.0
+      "physBlock": 6.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18412,7 +20928,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 6.75
+      "physBlock": 6.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18462,7 +20985,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 7.5
+      "physBlock": 7.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18512,7 +21042,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 8.25
+      "physBlock": 8.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18562,7 +21099,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 9.0
+      "physBlock": 9.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18612,7 +21156,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 9.75
+      "physBlock": 9.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18662,7 +21213,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 10.5
+      "physBlock": 10.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18712,7 +21270,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 11.25
+      "physBlock": 11.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18762,7 +21327,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 12.0
+      "physBlock": 12.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18812,7 +21384,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 12.75
+      "physBlock": 12.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18862,7 +21441,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 13.5
+      "physBlock": 13.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18912,7 +21498,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 14.25
+      "physBlock": 14.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -18962,7 +21555,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 15.0
+      "physBlock": 15.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19012,7 +21612,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 15.75
+      "physBlock": 15.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19062,7 +21669,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 16.5
+      "physBlock": 16.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19112,7 +21726,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 17.25
+      "physBlock": 17.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19162,7 +21783,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 18.0
+      "physBlock": 18.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19212,7 +21840,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 18.75
+      "physBlock": 18.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19262,7 +21897,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 19.5
+      "physBlock": 19.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19312,7 +21954,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 20.25
+      "physBlock": 20.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19362,7 +22011,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 21.0
+      "physBlock": 21.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19412,7 +22068,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 21.75
+      "physBlock": 21.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19462,7 +22125,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 22.5
+      "physBlock": 22.5,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19512,7 +22182,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 23.25
+      "physBlock": 23.25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19562,7 +22239,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 24.0
+      "physBlock": 24.0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19612,7 +22296,14 @@
     "replaces": [],
     "modifierOfSkill": 0,
     "stats": {
-      "physBlock": 24.75
+      "physBlock": 24.75,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -19661,7 +22352,15 @@
     "level": 1,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -19709,7 +22408,15 @@
     "level": 2,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -19757,7 +22464,15 @@
     "level": 3,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -19805,7 +22520,15 @@
     "level": 4,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -19853,7 +22576,15 @@
     "level": 5,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -19901,7 +22632,15 @@
     "level": 6,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -19949,7 +22688,15 @@
     "level": 7,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -19997,7 +22744,15 @@
     "level": 8,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20045,7 +22800,15 @@
     "level": 9,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20093,7 +22856,15 @@
     "level": 10,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20141,7 +22912,15 @@
     "level": 11,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20189,7 +22968,15 @@
     "level": 12,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20237,7 +23024,15 @@
     "level": 13,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20285,7 +23080,15 @@
     "level": 14,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20333,7 +23136,15 @@
     "level": 15,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20381,7 +23192,15 @@
     "level": 16,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20429,7 +23248,15 @@
     "level": 17,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20477,7 +23304,15 @@
     "level": 18,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20525,7 +23360,15 @@
     "level": 19,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20573,7 +23416,15 @@
     "level": 20,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20621,7 +23472,15 @@
     "level": 21,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20669,7 +23528,15 @@
     "level": 22,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20717,7 +23584,15 @@
     "level": 23,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20765,7 +23640,15 @@
     "level": 24,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20813,7 +23696,15 @@
     "level": 25,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20861,7 +23752,15 @@
     "level": 26,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20909,7 +23808,15 @@
     "level": 27,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -20957,7 +23864,15 @@
     "level": 28,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -21005,7 +23920,15 @@
     "level": 29,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -21053,7 +23976,15 @@
     "level": 30,
     "replaces": [],
     "modifierOfSkill": 0,
-    "stats": {},
+    "stats": {
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
+    },
     "requirements": [
       {
         "type": "CharacterLevel",
@@ -21104,7 +24035,14 @@
     "stats": {
       "magicBlock": 2.0,
       "physBlock": 2.0,
-      "armor": 10
+      "armor": 10,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21156,7 +24094,14 @@
     "stats": {
       "magicBlock": 2.5,
       "physBlock": 2.5,
-      "armor": 13
+      "armor": 13,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21208,7 +24153,14 @@
     "stats": {
       "magicBlock": 3.0,
       "physBlock": 3.0,
-      "armor": 16
+      "armor": 16,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21260,7 +24212,14 @@
     "stats": {
       "magicBlock": 3.5,
       "physBlock": 3.5,
-      "armor": 19
+      "armor": 19,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21312,7 +24271,14 @@
     "stats": {
       "magicBlock": 4.0,
       "physBlock": 4.0,
-      "armor": 22
+      "armor": 22,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21364,7 +24330,14 @@
     "stats": {
       "magicBlock": 4.5,
       "physBlock": 4.5,
-      "armor": 25
+      "armor": 25,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21416,7 +24389,14 @@
     "stats": {
       "magicBlock": 5.0,
       "physBlock": 5.0,
-      "armor": 28
+      "armor": 28,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21468,7 +24448,14 @@
     "stats": {
       "magicBlock": 5.5,
       "physBlock": 5.5,
-      "armor": 31
+      "armor": 31,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21520,7 +24507,14 @@
     "stats": {
       "magicBlock": 6.0,
       "physBlock": 6.0,
-      "armor": 34
+      "armor": 34,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21572,7 +24566,14 @@
     "stats": {
       "magicBlock": 6.5,
       "physBlock": 6.5,
-      "armor": 37
+      "armor": 37,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21624,7 +24625,14 @@
     "stats": {
       "magicBlock": 7.0,
       "physBlock": 7.0,
-      "armor": 40
+      "armor": 40,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21676,7 +24684,14 @@
     "stats": {
       "magicBlock": 7.5,
       "physBlock": 7.5,
-      "armor": 43
+      "armor": 43,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21728,7 +24743,14 @@
     "stats": {
       "magicBlock": 8.0,
       "physBlock": 8.0,
-      "armor": 46
+      "armor": 46,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21780,7 +24802,14 @@
     "stats": {
       "magicBlock": 8.5,
       "physBlock": 8.5,
-      "armor": 49
+      "armor": 49,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21832,7 +24861,14 @@
     "stats": {
       "magicBlock": 9.0,
       "physBlock": 9.0,
-      "armor": 52
+      "armor": 52,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21884,7 +24920,14 @@
     "stats": {
       "magicBlock": 9.5,
       "physBlock": 9.5,
-      "armor": 55
+      "armor": 55,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21936,7 +24979,14 @@
     "stats": {
       "magicBlock": 10.0,
       "physBlock": 10.0,
-      "armor": 58
+      "armor": 58,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -21988,7 +25038,14 @@
     "stats": {
       "magicBlock": 10.5,
       "physBlock": 10.5,
-      "armor": 61
+      "armor": 61,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22040,7 +25097,14 @@
     "stats": {
       "magicBlock": 11.0,
       "physBlock": 11.0,
-      "armor": 64
+      "armor": 64,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22092,7 +25156,14 @@
     "stats": {
       "magicBlock": 11.5,
       "physBlock": 11.5,
-      "armor": 67
+      "armor": 67,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22144,7 +25215,14 @@
     "stats": {
       "magicBlock": 12.0,
       "physBlock": 12.0,
-      "armor": 70
+      "armor": 70,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22196,7 +25274,14 @@
     "stats": {
       "magicBlock": 12.5,
       "physBlock": 12.5,
-      "armor": 73
+      "armor": 73,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22248,7 +25333,14 @@
     "stats": {
       "magicBlock": 13.0,
       "physBlock": 13.0,
-      "armor": 76
+      "armor": 76,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22300,7 +25392,14 @@
     "stats": {
       "magicBlock": 13.5,
       "physBlock": 13.5,
-      "armor": 79
+      "armor": 79,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22352,7 +25451,14 @@
     "stats": {
       "magicBlock": 14.0,
       "physBlock": 14.0,
-      "armor": 82
+      "armor": 82,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22404,7 +25510,14 @@
     "stats": {
       "magicBlock": 14.5,
       "physBlock": 14.5,
-      "armor": 85
+      "armor": 85,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22456,7 +25569,14 @@
     "stats": {
       "magicBlock": 15.0,
       "physBlock": 15.0,
-      "armor": 88
+      "armor": 88,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22508,7 +25628,14 @@
     "stats": {
       "magicBlock": 15.5,
       "physBlock": 15.5,
-      "armor": 91
+      "armor": 91,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22560,7 +25687,14 @@
     "stats": {
       "magicBlock": 16.0,
       "physBlock": 16.0,
-      "armor": 94
+      "armor": 94,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22612,7 +25746,14 @@
     "stats": {
       "magicBlock": 16.5,
       "physBlock": 16.5,
-      "armor": 97
+      "armor": 97,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [
       {
@@ -22655,7 +25796,14 @@
       "castSpeedInc": 33.0,
       "spellDamage": 33,
       "mp": 165,
-      "mpRegen": 6.800000000000001
+      "mpRegen": 6.800000000000001,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [],
     "cost": [
@@ -22685,7 +25833,14 @@
       "castSpeedInc": 33.0,
       "spellDamage": 33,
       "mp": 165,
-      "mpRegen": 6.800000000000001
+      "mpRegen": 6.800000000000001,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [],
     "cost": [
@@ -22715,7 +25870,14 @@
       "castSpeedInc": 33.0,
       "spellDamage": 33,
       "mp": 165,
-      "mpRegen": 6.800000000000001
+      "mpRegen": 6.800000000000001,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "requirements": [],
     "cost": [
@@ -22738,7 +25900,14 @@
     "description": "A Fireball modifier option. Each switch costs gold.",
     "executionId": "",
     "stats": {
-      "magicFireFlat": 15
+      "magicFireFlat": 15,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "cost": [
       {
@@ -22761,7 +25930,14 @@
     "description": "A Fireball modifier option. Each switch costs gold.",
     "executionId": "",
     "stats": {
-      "magicFireInc": 10
+      "magicFireInc": 10,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "cost": [
       {
@@ -22784,7 +25960,14 @@
     "description": "A Fireball modifier option. Each switch costs gold.",
     "executionId": "ExplosiveFireball",
     "stats": {
-      "aoe": 150
+      "aoe": 150,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "cost": [
       {

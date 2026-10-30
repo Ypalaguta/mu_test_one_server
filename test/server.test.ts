@@ -8,13 +8,16 @@ import { validateSkillGraph, skillResponse } from '../src/modules/skills/service
 import { validateState } from '../src/modules/progression/service.js';
 import { Skill } from '../src/modules/skills/model.js';
 import type { Repository, CharacterRecord } from '../src/shared/contracts.js';
+import { tokenHash } from '../src/modules/accounts/password.js';
 import { statFields } from '../src/shared/statFields.js';
 const data=await loadData('data');
 process.env.GAME_SERVER_TOKEN='test-only-secret';
-const headers={'content-type':'application/json','X-Game-Server-Token':'test-only-secret'};
+const headers={'content-type':'application/json','X-Game-Server-Token':'test-only-secret','X-Account-Session':'a'.repeat(64)};
 function repository(){
  const store=new Map(data.characters.map(d=>[d.id,structuredClone(d) as CharacterRecord]));
  const repo:Repository={
+  account:async id=>id===1?{id:1,login:'admin',passwordHash:'unused',role:'admin',notes:'',characterLimit:7,ban:{startedAt:null,expiresAt:null,revokedAt:null,reason:'',issuedBy:0,revokedBy:0}}:null,
+  sessionByHash:async hash=>hash===tokenHash('a'.repeat(64))?{tokenHash:hash,accountId:1,expiresAt:new Date(Date.now()+60000)}:null,
   character:async id=>store.get(id)??null,
   saveState:async(id,revision,value)=>{const old=store.get(id);if(!old||old.revision!==revision)return null;const next={...structuredClone(value),revision:revision+1};store.set(id,next);return next;},
   items:async()=>data.items, skills:async()=>data.skills,
@@ -30,7 +33,7 @@ test('seeds include 30-rank passive chains, modifiers, merge and empty learned s
  assert.equal(data.skills.length,450);assert.equal(data.skills.filter(s=>s.familyId===101).length,30);
  assert.equal(data.skills.filter(s=>s.modifierOfSkill===2).length,3);
  assert.deepEqual(data.characters[0]!.progress.learned,[]);assert.equal(data.characters[0]!.progress.inventoryCapacity,64);
- for(const s of data.skills){assert.equal(Object.keys(s.stats).length,70);assert.equal('growthStats' in s,false);}
+ for(const s of data.skills){assert.equal(Object.keys(s.stats).length,statFields.length);assert.equal('growthStats' in s,false);}
 });
 test('catalogue is a root array with new UE fields and no Mongo metadata',async()=>api(async base=>{
  const rows=await(await fetch(base+'/skills')).json();assert.equal(rows.length,450);
@@ -87,3 +90,21 @@ test('condition schema supports multiple item IDs but rejects repeated keys and 
 test('skill-only seed does not write characters or run migration operations',()=>{for(const op of createOperations(data,'skills')){assert.equal(op.collection,'skills');assert.equal('$unset'in op.update,false);}});
 test('old direct actionbar write is disabled',async()=>api(async base=>{assert.equal((await fetch(base+'/characters/1/action-bar',{method:'PUT',headers,body:'{"slots":[]}'})).status,410);}));
 test('partial snapshots cannot reset omitted progress or metadata',async()=>api(async base=>{assert.equal((await fetch(base+'/characters/1/state',{method:'PUT',headers,body:'{"expectedRevision":0,"info":{}}'})).status,400);}));
+
+test('action bar supports all 100 slots, roundtrip and clearing',async()=>api(async base=>{
+ const s=await(await fetch(base+'/characters/1/state',{headers})).json();
+ const b=body(s);b.actionBarSlots=Array.from({length:100},(_,slotNum)=>({slotNum,id:1,type:'Item'}));
+ const saved=await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)});
+ assert.equal(saved.status,200);const full=await saved.json();assert.equal(full.actionBarSlots.length,100);assert.equal(full.actionBarSlots[99].slotNum,99);
+ const loaded=await(await fetch(base+'/characters/1/state',{headers})).json();assert.deepEqual(loaded.actionBarSlots,full.actionBarSlots);
+ const cleared=body(loaded);cleared.actionBarSlots=[];
+ const res=await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(cleared)});assert.equal(res.status,200);assert.deepEqual((await res.json()).actionBarSlots,[]);
+}));
+test('action bar rejects out-of-range and duplicate slots without saving',async()=>api(async base=>{
+ const s=await(await fetch(base+'/characters/1/state',{headers})).json();
+ for(const slots of [[{slotNum:100,id:1,type:'Item'}],[{slotNum:-1,id:1,type:'Item'}],[{slotNum:99,id:1,type:'Item'},{slotNum:99,id:2,type:'Item'}]]){
+  const b=body(s);b.actionBarSlots=slots;
+  const res=await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)});assert.equal(res.status,400);
+ }
+ assert.equal((await(await fetch(base+'/characters/1/state',{headers})).json()).revision,s.revision);
+}));

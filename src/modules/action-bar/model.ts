@@ -11,7 +11,7 @@ export interface ActionBarSlot {
 }
 
 export const actionBarSlotSchema = new Schema<ActionBarSlot>({
-  slotNum: { type: Number, required: true, min: 0, max: 35, validate: Number.isInteger },
+  slotNum: { type: Number, required: true, min: 0, max: 99, validate: Number.isInteger },
   id: { type: Number, required: true, min: 1, max: 2147483647, validate: Number.isInteger },
   type: { type: String, required: true, enum: actionBarItemTypes }
 }, embedded);
@@ -21,8 +21,8 @@ export const actionBarSlotsField = {
   required: true,
   default: () => [],
   validate: {
-    validator: (slots: ActionBarSlot[]) => slots.length <= 36 &&
+    validator: (slots: ActionBarSlot[]) => slots.length <= 100 &&
       new Set(slots.map(slot => slot.slotNum)).size === slots.length,
-    message: 'Action bar must contain at most 36 unique slots'
+    message: 'Action bar must contain at most 100 unique slots'
   }
 };

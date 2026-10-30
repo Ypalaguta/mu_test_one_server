@@ -72,7 +72,14 @@
       "magicFireInc": 0,
       "magicColdInc": 0,
       "magicLightningInc": 0,
-      "magicChaosInc": 0
+      "magicChaosInc": 0,
+      "maxWeight": 40000,
+      "inventorySlots": 64,
+      "auctionSlots": 10,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "growthStats": {
       "aoe": 0,
@@ -144,7 +151,14 @@
       "magicFireInc": 0,
       "magicColdInc": 0,
       "magicLightningInc": 0,
-      "magicChaosInc": 0
+      "magicChaosInc": 0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "skillIds": [
       1
@@ -223,7 +237,14 @@
       "magicFireInc": 0,
       "magicColdInc": 0,
       "magicLightningInc": 0,
-      "magicChaosInc": 0
+      "magicChaosInc": 0,
+      "maxWeight": 40000,
+      "inventorySlots": 64,
+      "auctionSlots": 10,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "growthStats": {
       "aoe": 0,
@@ -295,7 +316,14 @@
       "magicFireInc": 0,
       "magicColdInc": 0,
       "magicLightningInc": 0,
-      "magicChaosInc": 0
+      "magicChaosInc": 0,
+      "maxWeight": 0,
+      "inventorySlots": 0,
+      "auctionSlots": 0,
+      "experienceBonus": 0,
+      "goldBonus": 0,
+      "lootQuantity": 0,
+      "lootRarity": 0
     },
     "skillIds": [
       2

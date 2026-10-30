@@ -7,13 +7,13 @@ export interface SeedOperation {
 function clean(value: object): Record<string, unknown> {
   return Object.fromEntries(Object.entries(value).filter(([key]) => key !== '_id' && key !== '__v'));
 }
-export function createOperations(data: SeedData, mode: 'static' | 'dev' | 'skills'): SeedOperation[] {
+export function createOperations(data: SeedData, mode: 'static' | 'dev' | 'skills' | 'items'): SeedOperation[] {
   if (mode === 'dev') return data.characters.map(doc => ({ collection: 'characters', filter: { id: doc.id }, update: { $setOnInsert: clean(doc) } }));
   const operations: SeedOperation[] = [];
-  const collections = mode === 'skills' ? ['skills'] as const : ['skills','classes','items','monsters'] as const;
+  const collections = mode === 'items' ? ['items'] as const : mode === 'skills' ? ['skills'] as const : ['skills','classes','items','monsters'] as const;
   for (const collection of collections)
     for (const doc of data[collection]) operations.push({ collection, filter: { id: doc.id }, update: { $set: clean(doc) } });
-  if (mode !== 'skills') for (const doc of data.spawns)
+  if (mode === 'static') for (const doc of data.spawns)
     operations.push({ collection: 'monsterSpawns', filter: { locationId: doc.locationId }, update: { $set: clean(doc) } });
   return operations;
 }

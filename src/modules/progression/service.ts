@@ -1,3 +1,4 @@
+import { equipmentError } from '../items/equipment.js';
 import { timingSafeEqual } from 'node:crypto';
 import type { RequestHandler } from 'express';
 import { Character } from '../characters/model.js';
@@ -15,7 +16,7 @@ export const gameServerOnly: RequestHandler = (req, _res, next) => {
 export async function snapshot(repo: Repository, id: number) {
   const d = found(await repo.character(id));
   const cls = found(await repo.characterClass(d.info.classId));
-  return { id: d.id, revision: d.revision, info: d.info, progress: d.progress, actionBarSlots: d.actionBarSlots, baseStats: cls.baseStats, growthStats: cls.growthStats };
+  return { id: d.id, accountId:d.accountId, isActive:d.isActive, isMain:d.isMain, aiSettings:d.aiSettings, revision: d.revision, info: d.info, progress: { ...d.progress, equipment: d.progress.equipment ?? [] }, actionBarSlots: d.actionBarSlots, baseStats: cls.baseStats, growthStats: cls.growthStats };
 }
 export async function validateState(repo: Repository, state: CharacterRecord) {
   const fail = (message: string): never => { throw new ApiError(400, 'INVALID_STATE', message); };
@@ -30,6 +31,8 @@ export async function validateState(repo: Repository, state: CharacterRecord) {
     const item = items.get(entry.itemId);
     if (!item || entry.quantity > item.maxStack) fail('Unknown item or stack overflow');
   }
+  const equipError = equipmentError(p.equipment ?? [], items);
+  if (equipError) fail(equipError);
   if (p.accessible.some(f => !families.has(f))) fail('Unknown accessible family');
   const learnedFamilies = new Set<number>(); const suppressed = new Set<number>();
   const seen = new Set<number>();
@@ -61,19 +64,21 @@ export async function saveSnapshot(repo: Repository, id: number, raw: unknown) {
   if (!Number.isInteger(body.expectedRevision) || Number(body.expectedRevision) < 0 || Number(body.expectedRevision) >= 2147483647) throw new ApiError(400,'INVALID_REVISION','Invalid revision');
   if (!body.info || !body.progress || !Array.isArray(body.actionBarSlots) || Object.keys(body).some(k => !['expectedRevision','info','progress','actionBarSlots'].includes(k))) throw new ApiError(400,'INVALID_STATE','Expected complete state');
   const requiredInfo=['level','experience','classId','skillPoints','gold','reputation','characterName','characterTitle','staff','clan','alliance','race','faction'];
-  const requiredProgress=['inventoryCapacity','inventory','achievements','accessible','learned','selectedModifiers'];
+  const requiredProgress=['inventoryCapacity','inventory','equipment','achievements','accessible','learned','selectedModifiers'];
   for(const [value,keys] of [[body.info,requiredInfo],[body.progress,requiredProgress]] as const) {
     if(typeof value!=='object'||value===null||Array.isArray(value)||keys.some(k=>!(k in value))) throw new ApiError(400,'INVALID_STATE','Snapshot fields must not be omitted');
   }
+  const existing = found(await repo.character(id));
   let normalized: CharacterRecord;
   try {
-    const doc = new Character({ id, revision: body.expectedRevision, info: body.info, progress: body.progress, actionBarSlots: body.actionBarSlots });
+    const doc = new Character({ id, accountId:existing.accountId, isActive:existing.isActive, isMain:existing.isMain, aiSettings:existing.aiSettings, revision: body.expectedRevision, info: body.info, progress: body.progress, actionBarSlots: body.actionBarSlots });
     await doc.validate(); normalized = doc.toObject();
   } catch { throw new ApiError(400,'INVALID_STATE','Invalid character fields'); }
+  normalized.info.staff = existing.info.staff; // Display-only legacy field; never an authorization source.
   await validateState(repo, normalized);
   // Resolve class before mutation. A failed validation never writes a partial result.
   const cls = found(await repo.characterClass(normalized.info.classId));
   const saved = await repo.saveState(id, Number(body.expectedRevision), normalized);
   if (!saved) throw new ApiError(409,'STATE_CONFLICT','Reload character before retrying');
-  return { id, revision: saved.revision, info: saved.info, progress: saved.progress, actionBarSlots: saved.actionBarSlots, baseStats: cls.baseStats, growthStats: cls.growthStats };
+  return { id, accountId:saved.accountId, isActive:saved.isActive, isMain:saved.isMain, aiSettings:saved.aiSettings, revision: saved.revision, info: saved.info, progress: saved.progress, actionBarSlots: saved.actionBarSlots, baseStats: cls.baseStats, growthStats: cls.growthStats };
 }

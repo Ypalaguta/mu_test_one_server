@@ -8,7 +8,7 @@ function invalidActionBar(): never {
   throw new ApiError(
     400,
     'INVALID_ACTION_BAR',
-    'slots must contain at most 36 unique slots with slotNum 0-35, a positive id and a valid type'
+    'slots must contain at most 100 unique slots with slotNum 0-99, a positive id and a valid type'
   );
 }
 
@@ -18,7 +18,7 @@ export function parseActionBarSlots(body: unknown): ActionBarSlot[] {
   }
 
   const slots = (body as { slots?: unknown }).slots;
-  if (!Array.isArray(slots) || slots.length > 36) return invalidActionBar();
+  if (!Array.isArray(slots) || slots.length > 100) return invalidActionBar();
 
   const usedSlots = new Set<number>();
   const result: ActionBarSlot[] = [];
@@ -31,7 +31,7 @@ export function parseActionBarSlots(body: unknown): ActionBarSlot[] {
     const id = slot.id;
     const type = slot.type;
 
-    if (!Number.isInteger(slotNum) || (slotNum as number) < 0 || (slotNum as number) > 35 ||
+    if (!Number.isInteger(slotNum) || (slotNum as number) < 0 || (slotNum as number) > 99 ||
         !Number.isInteger(id) || (id as number) < 1 || (id as number) > 2147483647 ||
         typeof type !== 'string' || !allowedTypes.has(type) || usedSlots.has(slotNum as number)) {
       return invalidActionBar();
