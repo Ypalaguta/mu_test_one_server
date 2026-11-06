@@ -17,7 +17,7 @@ export interface StatsResponse { baseStats: Stats; growthStats: Stats }
 export interface MonsterRecord extends EntityRecord, StatsResponse {}
 export type ClassRecord = InferSchemaType<typeof classSchema>;
 export type ItemRecord = InferSchemaType<typeof itemSchema>;
-export type SkillRecord = InferSchemaType<typeof skillSchema>;
+export type SkillRecord = Omit<InferSchemaType<typeof skillSchema>, 'effectParameters'> & { effectParameters: Record<string, number> };
 export interface CampMember { enemyId: string; level: number; offset: { x: number; y: number; z: number }; yaw: number }
 export interface Camp {
   campId: string; position: { x: number; y: number; z: number }; yaw: number;

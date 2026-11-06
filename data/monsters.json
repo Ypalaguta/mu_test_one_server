@@ -174,9 +174,7 @@
       "lootQuantity": 0,
       "lootRarity": 0
     },
-    "skillIds": [
-      1
-    ]
+    "skillIds": []
   },
   {
     "id": 102,
@@ -353,8 +351,6 @@
       "lootQuantity": 0,
       "lootRarity": 0
     },
-    "skillIds": [
-      2
-    ]
+    "skillIds": []
   }
 ]

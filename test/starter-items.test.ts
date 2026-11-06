@@ -7,7 +7,7 @@ import { createOperations } from '../src/seed/operations.js';
 test('item-only seed includes starter gear without writing characters or other catalogues', async () => {
   const data = await loadData(resolve('data'));
   const operations = createOperations(data, 'items');
-  assert.equal(data.items.length, 187);
+  assert.equal(data.items.length, 261);
   assert.equal(operations.length, data.items.length);
   assert.ok(operations.every(op => op.collection === 'items' && op.update.$set));
   for (const id of [4, 5, 6, 7, 8, 9]) {

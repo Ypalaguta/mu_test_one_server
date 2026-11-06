@@ -1,4 +1,6 @@
 import { randomBytes } from 'node:crypto';
+import { loadServerNotice } from './server-notice.js';
+import { isValidCharacterName } from '../characters/names.js';
 import type { Repository, CharacterRecord } from '../../shared/contracts.js';
 import type { AccountRecord } from './types.js';
 import { hashPassword, verifyPassword, tokenHash } from './password.js';
@@ -36,7 +38,7 @@ export async function login(repo:Repository,raw:unknown) {
  const sessionToken=randomBytes(32).toString('hex');
  const sessionExpiresAt=new Date(Date.now()+12*60*60*1000);
  await repo.createSession({tokenHash:tokenHash(sessionToken),accountId:a.id,expiresAt:sessionExpiresAt});
- return {account:safeAccount(a),characters,sessionToken,sessionExpiresAt:sessionExpiresAt.toISOString()};
+ return {account:safeAccount(a),characters,sessionToken,sessionExpiresAt:sessionExpiresAt.toISOString(),serverNotice:await loadServerNotice()};
 }
 export async function authenticate(repo:Repository,token:unknown) {
  if(typeof token!=='string'||!/^[a-f0-9]{64}$/.test(token)||!repo.sessionByHash||!repo.account)throw new ApiError(401,'SESSION_REQUIRED','Account session required');
@@ -58,7 +60,7 @@ export async function register(repo:Repository,raw:unknown) {
  if(!repo.createAccountWithCharacter)throw new ApiError(503,'UNAVAILABLE','Registration unavailable');
  const name=c.body.characterName??c.login;
  const classId=c.body.classId??1;
- if(typeof name!=='string'||!name.trim()||name.length>64||typeof classId!=='number'||!Number.isInteger(classId)||classId<1)throw new ApiError(400,'INVALID_CHARACTER','Invalid initial character');
+ if(!isValidCharacterName(name)||typeof classId!=='number'||!Number.isInteger(classId)||classId<1)throw new ApiError(400,'INVALID_CHARACTER','Character name must be 1..64 characters without whitespace; a valid class is required');
  found(await repo.characterClass(classId));
  try {const a=await repo.createAccountWithCharacter(c.login,await hashPassword(c.password),name.trim(),classId);return {account:safeAccount(a)};}
  catch(e){if((e as {code?:number}).code===11000)throw new ApiError(409,'LOGIN_EXISTS','Login already exists');throw e;}

@@ -16,6 +16,6 @@ test('seed levels keep starters at 1 and equipment tiers at 10/20/30 independent
   for(let id=1;id<=9;id++) assert.equal(byId.get(id)?.itemLevel,1);
   for(const [id,level] of [[1001,10],[1101,20],[1201,30],[2001,10],[2101,20],[2201,30],[3001,10],[3101,20],[3201,30]])
     assert.equal(byId.get(id!)?.itemLevel,level);
-  assert.ok(data.items.every(i=>[1,10,20,30].includes(i.itemLevel)));
+  assert.ok(data.items.filter(i=>i.id<70000).every(i=>[1,10,20,30].includes(i.itemLevel)));
   assert.equal(byId.get(1)?.requirements.level,1);
 });

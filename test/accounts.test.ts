@@ -40,6 +40,7 @@ test('password hashes are salted and verified without storing plaintext',async()
 test('login returns safe account and complete owned snapshots in one response',async()=>{
  const f=fixture();const r=await login(f.repo,{login:' TESTER ',password});
  assert.equal(r.account.role,'admin');assert.equal(r.characters.length,1);
+ assert.equal(r.serverNotice.id,'welcome-2026-11');assert.equal(r.serverNotice.enabled,true);
  assert.equal(r.characters[0]!.isMain,true);assert.equal(r.characters[0]!.isActive,true);
  assert.equal(r.characters[0]!.accountId,1);assert.equal(r.characters[0]!.baseStats.hp,150);
  assert.equal(r.characters[0]!.progress.inventoryCapacity,64);assert.deepEqual(r.characters[0]!.aiSettings,{allowedSkillIds:[]});
@@ -72,6 +73,16 @@ test('registration does not allow role injection and never returns password hash
  const f=fixture();await assert.rejects(register(f.repo,{login:'newuser',password,role:'admin'}),/Unknown field/);
  const r=await register(f.repo,{login:'newuser',password,characterName:'NewHero',classId:1});
  assert.equal(r.account.role,'player');assert.equal('passwordHash' in r.account,false);
+});
+test('registration rejects whitespace in character names before creating accounts',async()=>{
+ const f=fixture();let created=0;
+ const create=f.repo.createAccountWithCharacter!;
+ f.repo.createAccountWithCharacter=async(...args)=>{created++;return create(...args);};
+ for(const characterName of ['Two Words',' Leading','Trailing ','Tab\tName','Line\nName','No\u00a0Break',''])
+  await assert.rejects(register(f.repo,{login:'newuser',password,characterName,classId:1}),/without whitespace/);
+ assert.equal(created,0);
+ await register(f.repo,{login:'newuser',password,characterName:'Knight_One',classId:1});
+ assert.equal(created,1);
 });
 test('admin grants stack items, preserve ownership and refuse full inventories atomically',async()=>{
  const f=fixture();const r=await login(f.repo,{login:'tester',password});

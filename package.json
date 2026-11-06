@@ -16,7 +16,8 @@
     "seed:check": "node --import tsx src/seed/check.ts",
     "test": "node --import tsx --test test/*.test.ts",
     "seed:skills": "node --env-file=.env --import tsx src/seed/run.ts skills",
-    "seed:items": "node --env-file=.env --import tsx src/seed/run.ts items"
+    "seed:items": "node --env-file=.env --import tsx src/seed/run.ts items",
+    "seed:knight": "node --env-file=.env --import tsx src/seed/knight.ts"
   },
   "dependencies": {
     "express": "^5.2.1",

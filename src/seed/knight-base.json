@@ -1,0 +1,450 @@
+[
+  [
+    "sword_strike",
+    "Sword Strike",
+    1,
+    "Enemy",
+    0,
+    4,
+    "sword",
+    "Strike an enemy with a one-handed sword.",
+    {
+      "damageMultiplier": [
+        1.1,
+        0.1
+      ]
+    }
+  ],
+  [
+    "parry",
+    "Parry",
+    2,
+    "Self",
+    5,
+    18,
+    "onehand",
+    "Temporarily increase your chance to parry attacks.",
+    {
+      "parryChancePct": [
+        20,
+        3
+      ]
+    }
+  ],
+  [
+    "shield_bash",
+    "Shield Bash",
+    5,
+    "Enemy",
+    0,
+    12,
+    "shield",
+    "Bash an enemy with your shield, dealing damage and stunning them.",
+    {
+      "damageMultiplier": [
+        0.6,
+        0.08
+      ],
+      "stunSeconds": [
+        1.5,
+        0.1
+      ]
+    }
+  ],
+  [
+    "spell_reflection",
+    "Spell Reflection",
+    8,
+    "Self",
+    3,
+    25,
+    "shield",
+    "Temporarily reflect the next eligible targeted hostile spell.",
+    {
+      "reflectedDamagePct": [
+        60,
+        4
+      ],
+      "charges": [
+        1,
+        0
+      ]
+    }
+  ],
+  [
+    "grappling_chain",
+    "Grappling Chain",
+    4,
+    "Enemy",
+    0,
+    18,
+    "",
+    "Pull an enemy towards you.",
+    {
+      "damageMultiplier": [
+        0.2,
+        0.05
+      ]
+    }
+  ],
+  [
+    "challenge",
+    "Challenge",
+    1,
+    "Enemy",
+    3,
+    10,
+    "",
+    "Taunt an enemy, forcing it to target you for the duration.",
+    {
+      "threatBonus": [
+        100,
+        50
+      ]
+    }
+  ],
+  [
+    "mass_challenge",
+    "Mass Challenge",
+    7,
+    "Self",
+    3,
+    25,
+    "",
+    "Taunt nearby enemies, forcing them to target you.",
+    {
+      "radius": [
+        450,
+        10
+      ],
+      "threatBonus": [
+        100,
+        50
+      ]
+    }
+  ],
+  [
+    "arrest",
+    "Arrest",
+    3,
+    "Enemy",
+    3,
+    16,
+    "",
+    "Root an enemy in place.",
+    {
+      "rootSeconds": [
+        3,
+        0.2
+      ]
+    }
+  ],
+  [
+    "judgment_charge",
+    "Judgment Charge",
+    6,
+    "Enemy",
+    0,
+    18,
+    "",
+    "Charge towards an enemy, dealing damage and stunning them.",
+    {
+      "damageMultiplier": [
+        0.8,
+        0.1
+      ],
+      "stunSeconds": [
+        1,
+        0.1
+      ]
+    }
+  ],
+  [
+    "healing_prayer",
+    "Healing Prayer",
+    2,
+    "Self",
+    0,
+    20,
+    "",
+    "Restore a portion of your maximum health.",
+    {
+      "healMaxHpPct": [
+        12,
+        2
+      ]
+    }
+  ],
+  [
+    "tribunal",
+    "Tribunal",
+    10,
+    "Enemy",
+    6,
+    20,
+    "sword",
+    "Deliver a guaranteed critical sword strike and temporarily reduce the target critical chance.",
+    {
+      "damageMultiplier": [
+        1.2,
+        0.1
+      ],
+      "criticalChanceReductionPct": [
+        10,
+        2
+      ]
+    }
+  ],
+  [
+    "aura_of_restraint",
+    "Aura of Restraint",
+    4,
+    "Self",
+    8,
+    24,
+    "",
+    "Temporarily reduce damage dealt by nearby enemies.",
+    {
+      "radius": [
+        450,
+        10
+      ],
+      "enemyDamageReductionPct": [
+        10,
+        1.5
+      ]
+    }
+  ],
+  [
+    "last_stand",
+    "Last Stand",
+    9,
+    "Self",
+    8,
+    45,
+    "",
+    "Activate below 30% health. Block healing and increase damage, movement speed and attack speed for the duration.",
+    {
+      "damageBonusPct": [
+        20,
+        3
+      ],
+      "movementSpeedBonusPct": [
+        15,
+        1
+      ],
+      "attackSpeedBonusPct": [
+        20,
+        2
+      ],
+      "healingBlocked": [
+        1,
+        0
+      ]
+    }
+  ],
+  [
+    "guardians_oath",
+    "Guardian's Oath",
+    6,
+    "Self",
+    8,
+    30,
+    "",
+    "Redirect part of nearby party members damage to yourself, reducing the redirected damage.",
+    {
+      "radius": [
+        800,
+        0
+      ],
+      "redirectDamagePct": [
+        15,
+        2
+      ],
+      "redirectedDamageReductionPct": [
+        20,
+        2
+      ]
+    }
+  ],
+  [
+    "spell_intercession",
+    "Spell Intercession",
+    8,
+    "Self",
+    5,
+    35,
+    "",
+    "Intercept eligible single-target hostile spells aimed at nearby party members and increase spell defense.",
+    {
+      "radius": [
+        800,
+        0
+      ],
+      "spellDamageReductionPct": [
+        20,
+        3
+      ]
+    }
+  ],
+  [
+    "purging_verdict",
+    "Purging Verdict",
+    10,
+    "Self",
+    0,
+    40,
+    "",
+    "Dispel negative effects from nearby party members and transfer them to nearby enemies. Combat handlers define exceptions.",
+    {
+      "radius": [
+        600,
+        10
+      ],
+      "transferredDurationPct": [
+        50,
+        5
+      ]
+    }
+  ],
+  [
+    "blood_covenant",
+    "Blood Covenant",
+    7,
+    "Self",
+    0,
+    1,
+    "",
+    "Toggle a party combat aura that drains your health every second. Stops before upkeep would kill you.",
+    {
+      "radius": [
+        800,
+        0
+      ],
+      "hpCostMaxPctPerSecond": [
+        2,
+        0
+      ],
+      "partyDamageBonusPct": [
+        8,
+        2
+      ],
+      "partyAttackSpeedBonusPct": [
+        5,
+        1
+      ]
+    }
+  ],
+  [
+    "arcane_resilience",
+    "Arcane Resilience",
+    1,
+    "Self",
+    0,
+    0,
+    "",
+    "Permanently increase magic resistance.",
+    {
+      "magicResist": [
+        3,
+        3
+      ]
+    }
+  ],
+  [
+    "arrow_ward",
+    "Arrow Ward",
+    3,
+    "Self",
+    0,
+    0,
+    "",
+    "Reduce damage from bow and crossbow attacks.",
+    {
+      "bowDamageReductionPct": [
+        2,
+        2
+      ]
+    }
+  ],
+  [
+    "physical_resilience",
+    "Physical Resilience",
+    1,
+    "Self",
+    0,
+    0,
+    "",
+    "Reduce incoming physical damage.",
+    {
+      "physicalDamageReductionPct": [
+        1.5,
+        1.5
+      ]
+    }
+  ],
+  [
+    "vitality",
+    "Vitality",
+    2,
+    "Self",
+    0,
+    0,
+    "",
+    "Permanently increase health regeneration.",
+    {
+      "hpRegen": [
+        1,
+        1
+      ]
+    }
+  ],
+  [
+    "unyielding",
+    "Unyielding",
+    5,
+    "Self",
+    0,
+    0,
+    "",
+    "Gain more armor as health is lost, reaching the listed maximum near zero health.",
+    {
+      "maxArmorBonusPct": [
+        10,
+        5
+      ]
+    }
+  ],
+  [
+    "shield_discipline",
+    "Shield Discipline",
+    3,
+    "Self",
+    0,
+    0,
+    "shield",
+    "Increase physical block chance while a shield is equipped.",
+    {
+      "physBlock": [
+        2,
+        2
+      ]
+    }
+  ],
+  [
+    "shield_mastery",
+    "Shield Mastery",
+    4,
+    "Self",
+    0,
+    0,
+    "shield",
+    "Increase the armor provided by your equipped shield.",
+    {
+      "shieldArmorBonusPct": [
+        10,
+        5
+      ]
+    }
+  ]
+]

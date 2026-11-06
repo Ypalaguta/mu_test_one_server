@@ -1,4 +1,5 @@
 import { equipmentError } from '../items/equipment.js';
+import { isValidCharacterName } from '../characters/names.js';
 import { timingSafeEqual } from 'node:crypto';
 import type { RequestHandler } from 'express';
 import { Character } from '../characters/model.js';
@@ -75,6 +76,8 @@ export async function saveSnapshot(repo: Repository, id: number, raw: unknown) {
     await doc.validate(); normalized = doc.toObject();
   } catch { throw new ApiError(400,'INVALID_STATE','Invalid character fields'); }
   normalized.info.staff = existing.info.staff; // Display-only legacy field; never an authorization source.
+  if (normalized.info.characterName !== existing.info.characterName && !isValidCharacterName(normalized.info.characterName))
+    throw new ApiError(400, 'INVALID_CHARACTER', 'Character name must be 1..64 characters without whitespace');
   await validateState(repo, normalized);
   // Resolve class before mutation. A failed validation never writes a partial result.
   const cls = found(await repo.characterClass(normalized.info.classId));

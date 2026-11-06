@@ -5,7 +5,7 @@ import { loadData } from '../src/seed/data.js';
 import { createOperations } from '../src/seed/operations.js';
 import { createApp } from '../src/app.js';
 import { validateSkillGraph, skillResponse } from '../src/modules/skills/service.js';
-import { validateState } from '../src/modules/progression/service.js';
+import { validateState, saveSnapshot } from '../src/modules/progression/service.js';
 import { Skill } from '../src/modules/skills/model.js';
 import type { Repository, CharacterRecord } from '../src/shared/contracts.js';
 import { tokenHash } from '../src/modules/accounts/password.js';
@@ -29,17 +29,27 @@ function repository(){
 }
 async function api(run:(base:string,repo:Repository)=>Promise<void>){const repo=repository();const server=createApp(repo).listen(0,'127.0.0.1');await once(server,'listening');const addr=server.address();assert.ok(addr&&typeof addr!=='string');try{await run(`http://127.0.0.1:${addr.port}/api`,repo);}finally{await new Promise<void>(resolve=>server.close(()=>resolve()));}}
 function body(s:any){return {expectedRevision:s.revision,info:s.info,progress:s.progress,actionBarSlots:s.actionBarSlots};}
-test('seeds include 30-rank passive chains, modifiers, merge and empty learned state',()=>{
- assert.equal(data.skills.length,450);assert.equal(data.skills.filter(s=>s.familyId===101).length,30);
- assert.equal(data.skills.filter(s=>s.modifierOfSkill===2).length,3);
+test('renaming rejects whitespace but unchanged legacy names remain saveable', async()=>{
+ const repo=repository();const existing=(await repo.character(1))!;
+ const invalid=body(structuredClone(existing));invalid.info.characterName='Two Words';
+ await assert.rejects(saveSnapshot(repo,1,invalid),/without whitespace/);
+ assert.equal((await repo.character(1))!.revision,existing.revision);
+ const legacy={...structuredClone(existing),info:{...existing.info,characterName:'Legacy Name'}};
+ const originalRead=repo.character;repo.character=async id=>id===1?legacy:originalRead(id);
+ const saved=await saveSnapshot(repo,1,body(legacy));
+ assert.equal(saved.info.characterName,'Legacy Name');
+});
+test('seeds include staggered Knight chains and empty learned state',()=>{
+ assert.equal(data.skills.length,248);assert.equal(data.skills.filter(s=>s.familyId===2001).length,11);
+ assert.equal(data.skills.filter(s=>s.modifierOfSkill>0).length,0);
  assert.deepEqual(data.characters[0]!.progress.learned,[]);assert.equal(data.characters[0]!.progress.inventoryCapacity,64);
  for(const s of data.skills){assert.equal(Object.keys(s.stats).length,statFields.length);assert.equal('growthStats' in s,false);}
 });
 test('catalogue is a root array with new UE fields and no Mongo metadata',async()=>api(async base=>{
- const rows=await(await fetch(base+'/skills')).json();assert.equal(rows.length,450);
- const s=rows.find((x:any)=>x.id===1);assert.equal(s.familyId,1);assert.equal(s.prev,0);assert.equal(s.icon,null);
+ const rows=await(await fetch(base+'/skills')).json();assert.equal(rows.length,248);
+ const s=rows.find((x:any)=>x.id===20001);assert.equal(s.familyId,2001);assert.equal(s.prev,0);assert.equal(s.icon,null);
  for(const key of ['_id','groupId','maxLevel','baseStats','growthStats','next'])assert.equal(key in s,false);
- assert.deepEqual(await(await fetch(base+'/skills/1')).json(),s);
+ assert.deepEqual(await(await fetch(base+'/skills/20001')).json(),s);
  const items=await(await fetch(base+'/items')).json();assert.ok(items.every((i:any)=>i.maxStack>=1&&i.inventoryTab&&!('_id'in i)));
 }));
 test('state requires server token, public catalogue does not',async()=>api(async base=>{
@@ -55,7 +65,7 @@ test('character snapshot contains inventory, info, skill state, actionbar and cl
 }));
 test('atomic save persists all changes and rejects stale version without partial writes',async()=>api(async base=>{
  const s=await(await fetch(base+'/characters/1/state',{headers})).json();const b=body(s);
- b.info.gold-=10;b.info.skillPoints-=1;b.progress.learned=[1];b.progress.inventory[0].slot=20;b.actionBarSlots=[{slotNum:0,id:1,type:'Skill'}];
+ b.info.gold-=10;b.info.skillPoints-=1;b.progress.learned=[20001];b.progress.inventory[0].slot=20;b.actionBarSlots=[{slotNum:0,id:20001,type:'Skill'}];
  const res=await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)});assert.equal(res.status,200);const saved=await res.json();assert.equal(saved.revision,1);assert.equal(saved.info.gold,9990);
  b.info.gold=0;assert.equal((await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)})).status,409);
  const again=await(await fetch(base+'/characters/1/state',{headers})).json();assert.equal(again.info.gold,9990);assert.equal(again.progress.inventory[0].slot,20);
@@ -70,18 +80,19 @@ test('capacity may be 500, cannot be 501 or 63',async()=>api(async base=>{
  const s=await(await fetch(base+'/characters/1/state',{headers})).json();for(const n of [501,63]){const b=body(structuredClone(s));b.progress.inventoryCapacity=n;assert.equal((await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)})).status,400);}
  const b=body(s);b.progress.inventoryCapacity=500;b.progress.inventory[0].slot=499;assert.equal((await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)})).status,200);
 }));
-test('later merged rank suppresses source families transitively',async()=>{
- const repo=repository();const s=structuredClone(data.characters[0]!) as CharacterRecord;
- s.progress.learned=[5002,101];await assert.rejects(validateState(repo,s),/Replaced families/);
- s.progress.learned=[5002];await validateState(repo,s);
-});
-test('selected modifiers require learned matching family; actionbar requires learned skill',async()=>{
- const repo=repository();const s=structuredClone(data.characters[0]!) as CharacterRecord;
- s.progress.selectedModifiers=[{familyId:2,skillId:6001}];await assert.rejects(validateState(repo,s),/modifier/);
- s.progress.learned=[2];await validateState(repo,s);s.actionBarSlots=[{slotNum:0,id:1,type:'Skill'}];await assert.rejects(validateState(repo,s),/unlearned/);
-});
-test('graph rejects cycles, branches and replacement of a nonterminal rank',()=>{
- for(const mutate of [(s:any[])=>{s.find(x=>x.id===101).prev=20102;},(s:any[])=>{s.find(x=>x.id===20103).prev=101;},(s:any[])=>{s.find(x=>x.id===5000).replaces=[101];}]){const s=structuredClone(data.skills);mutate(s);assert.throws(()=>validateSkillGraph(s));}
+test('graph and state still support modifiers and merges using isolated definitions',async()=>{
+ const defs=[{id:1,familyId:1},{id:2,familyId:1,prev:1},{id:3,familyId:2,replaces:[2]},
+ {id:4,familyId:2,prev:3},{id:5,modifierOfSkill:2}].map(x=>new Skill(x).toObject({flattenMaps:true}));
+ validateSkillGraph(defs);
+ const repo=repository();repo.skills=async()=>defs;repo.skill=async id=>defs.find(s=>s.id===id)??null;
+ const state=structuredClone(data.characters[0]!) as CharacterRecord;state.progress.accessible=[1,2];
+ state.progress.learned=[4,1];await assert.rejects(validateState(repo,state),/Replaced families/);
+ state.progress.learned=[4];await validateState(repo,state);
+ state.progress.selectedModifiers=[{familyId:2,skillId:5}];await validateState(repo,state);
+ state.progress.learned=[1];await assert.rejects(validateState(repo,state),/modifier/);
+ state.progress.selectedModifiers=[];state.actionBarSlots=[{slotNum:0,id:4,type:'Skill'}];await assert.rejects(validateState(repo,state),/unlearned/);
+ for(const mutate of [(s:any[])=>{s[0].prev=2;},(s:any[])=>{s[3].familyId=1;s[3].prev=1;},(s:any[])=>{s[2].replaces=[1];}]){
+ const copy=structuredClone(defs);mutate(copy);assert.throws(()=>validateSkillGraph(copy));}
 });
 test('condition schema supports multiple item IDs but rejects repeated keys and invalid costs',async()=>{
  await new Skill({id:1,familyId:1,requirements:[{type:'Item',id:1,amount:2},{type:'Item',id:2,amount:3}]}).validate();

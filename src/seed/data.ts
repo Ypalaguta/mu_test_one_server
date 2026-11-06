@@ -26,7 +26,7 @@ function reference(ids: ReadonlySet<number>, value: number, label: string): void
   if (!ids.has(value)) throw new Error(`Unknown reference ${label}: ${value}`);
 }
 export async function loadData(directory: string) {
-  const skills = await records(directory, 'skills.json', async row => { const doc = new Skill(row); await doc.validate(); return doc.toObject(); });
+  const skills = await records(directory, 'skills.json', async row => { const doc = new Skill(row); await doc.validate(); return doc.toObject({flattenMaps:true}); });
   validateSkillGraph(skills);
   const classes = await records(directory, 'classes.json', async row => { const doc = new CharacterClass(row); await doc.validate(); return doc.toObject(); });
   const items = await records(directory, 'items.json', async row => { const doc = new Item(row); await doc.validate(); return doc.toObject(); });
@@ -37,6 +37,10 @@ export async function loadData(directory: string) {
     unique(values.map(v => v.id), label);
   unique(spawns.map(v => v.locationId), 'spawns');
   const skillIds = new Set(skills.map(v => v.id));
+  const itemIds = new Set(items.map(v => v.id));
+  for (const skill of skills)
+    for (const condition of [...skill.requirements, ...skill.cost])
+      if (condition.type === 'Item') reference(itemIds, condition.id, 'skill item');
   const classIds = new Set(classes.map(v => v.id));
   const monsterIds = new Set(monsters.map(v => v.id));
   for (const definition of [...classes, ...monsters])
