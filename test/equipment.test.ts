@@ -64,6 +64,18 @@ test('equipment and bag persist atomically and survive login snapshot reload', a
   await assert.rejects(saveSnapshot(h.repo,s.id,body(s)),/Reload character/);
   assert.equal(h.writes(),1);
 });
+test('loot receipt and both potions survive reload as one revision', async () => {
+  const h = harness();
+  const state = h.getState();
+  state.progress.lastLootReceipt = 'df125396eaab41c6802b656143d931de';
+  state.progress.inventory = [{slot: 0, itemId: 4001, quantity: 2}];
+  await saveSnapshot(h.repo, state.id, body(state));
+  await assert.rejects(saveSnapshot(h.repo, state.id, body(state)), /Reload character/);
+  const loaded = await snapshot(h.repo, state.id);
+  assert.equal(loaded.progress.lastLootReceipt, state.progress.lastLootReceipt);
+  assert.deepEqual(loaded.progress.inventory, state.progress.inventory);
+  assert.equal(h.writes(), 1);
+});
 test('invalid equipment cannot partially overwrite the inventory', async () => {
   const h=harness(),original=h.getState(),s=h.getState();
   s.progress.inventory=[];

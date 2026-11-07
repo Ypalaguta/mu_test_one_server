@@ -6,6 +6,7 @@ const equipped = new Schema({ slot: { type: String, enum: equipmentSlots, requir
 const modifier = new Schema({ familyId: integer(1,1), skillId: integer(1,1) }, embedded);
 export const progressSchema = new Schema({
   inventoryCapacity: { ...integer(64,64), max: 500 },
+  lastLootReceipt: { type: String, maxlength: 32, match: /^[a-fA-F0-9]{32}$/ },
   inventory: { type: [stack], default: () => [] },
   equipment: { type: [equipped], default: () => [], validate: (v: unknown[]) => v.length <= 17 },
   achievements: idList, accessible: idList, learned: idList,

@@ -10,7 +10,7 @@ import type { ActionBarSlot } from '../modules/action-bar/model.js';
 export type Info = InferSchemaType<typeof infoSchema>;
 export interface EntityRecord { id: number; info: Info }
 export interface InventoryStack { slot: number; itemId: number; quantity: number }
-export interface Progress { inventoryCapacity: number; inventory: InventoryStack[]; equipment: { slot: EquipmentSlot; itemId: number }[]; achievements: number[]; accessible: number[]; learned: number[]; selectedModifiers: {familyId:number;skillId:number}[] }
+export interface Progress { lastLootReceipt?: string | null; inventoryCapacity: number; inventory: InventoryStack[]; equipment: { slot: EquipmentSlot; itemId: number }[]; achievements: number[]; accessible: number[]; learned: number[]; selectedModifiers: {familyId:number;skillId:number}[] }
 export interface CharacterRecord extends EntityRecord { accountId: number; isActive: boolean; isMain: boolean; aiSettings: { allowedSkillIds: number[] }; revision: number; progress: Progress; actionBarSlots: ActionBarSlot[] }
 export interface ActionBarRecord { actionBarSlots: ActionBarSlot[] }
 export interface StatsResponse { baseStats: Stats; growthStats: Stats }
