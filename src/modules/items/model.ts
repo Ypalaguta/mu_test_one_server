@@ -4,6 +4,7 @@ import { documentOptions, embedded, gameId, nameField, statsField, integer, idLi
 const requirements = new Schema({ level: integer(1, 1), classIds: idList }, embedded);
 export const itemSchema = new Schema({
   id: gameId, name: nameField,
+  setId: integer(),
   itemLevel: integer(1,1),
   type: { type: String, enum: itemTypes, required: true },
   slot: { type: String, enum: itemSlots, default: 'None', required: true },
@@ -12,7 +13,7 @@ export const itemSchema = new Schema({
   iconName: { type: String, default: '' },
   executionId: { type: String, default: '' },
   inventoryTab: { type: String, enum: ['Equipment','SuppliesMaterials','Misc','Temporary','Quest','Artifact'], default: 'Misc' },
-  maxStack: integer(1,1),
+  maxStack: { ...integer(1,1), max: Number.MAX_SAFE_INTEGER },
   modifierIcon: { type: String, default: '' },
   weight: { type: Number, default: 0, min: 0, validate: Number.isFinite },
   autoUsageAvailable: { type: Boolean, default: false },

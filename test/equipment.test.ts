@@ -14,6 +14,7 @@ function harness() {
   let state = structuredClone(data.characters[0]!) as CharacterRecord;
   let writes = 0;
   const repo = {
+    itemSets:async()=>data.itemSets,
     character: async () => structuredClone(state),
     characterClass: async () => data.classes[0],
     items: async () => data.items, skills: async () => data.skills,
@@ -58,7 +59,7 @@ test('equipment and bag persist atomically and survive login snapshot reload', a
   const saved=await saveSnapshot(h.repo,s.id,body(s));
   assert.deepEqual(saved.progress.equipment,s.progress.equipment);
   const loaded=await snapshot(h.repo,s.id);
-  assert.deepEqual(loaded.progress.inventory,s.progress.inventory);
+  assert.deepEqual(loaded.progress.inventory.filter(x=>x.itemId!==900000),s.progress.inventory);
   assert.deepEqual(loaded.progress.equipment,s.progress.equipment);
   assert.equal(h.writes(),1);
   await assert.rejects(saveSnapshot(h.repo,s.id,body(s)),/Reload character/);
@@ -73,7 +74,7 @@ test('loot receipt and both potions survive reload as one revision', async () =>
   await assert.rejects(saveSnapshot(h.repo, state.id, body(state)), /Reload character/);
   const loaded = await snapshot(h.repo, state.id);
   assert.equal(loaded.progress.lastLootReceipt, state.progress.lastLootReceipt);
-  assert.deepEqual(loaded.progress.inventory, state.progress.inventory);
+  assert.deepEqual(loaded.progress.inventory.filter(x=>x.itemId!==900000), state.progress.inventory);
   assert.equal(h.writes(), 1);
 });
 test('invalid equipment cannot partially overwrite the inventory', async () => {
@@ -105,4 +106,30 @@ test('new character defaults empty; item enums reject legacy strings and invalid
   assert.deepEqual(c.toObject().progress.equipment,[]);
   for(const patch of [{type:'weapon'},{slot:'mainHand'},{slot:'Invalid'}])
     await assert.rejects(new Item({id:99,name:'Test',type:'Sword',slot:'OneHand',...patch}).validate());
+});
+test('equipment grants an action bar skill only while worn or learned', async () => {
+  const h = harness(), s = h.getState();
+  s.progress.learned = [];
+  s.progress.selectedModifiers = [];
+  s.progress.equipment = [{slot:'MainHand', itemId:1202}];
+  s.actionBarSlots = [{slotNum:0, id:20001, type:'Skill'}];
+  await saveSnapshot(h.repo, s.id, body(s));
+  const unequipped = h.getState();
+  unequipped.progress.equipment = [];
+  await assert.rejects(saveSnapshot(h.repo, s.id, body(unequipped)), /unlearned/);
+});
+test('old balance moves to a gold stack once and split stacks support large balances', async () => {
+  const h = harness(), legacy = h.getState();
+  legacy.info.gold = 150;
+  legacy.progress.inventory = [];
+  const initial = await snapshot({...h.repo, character:async()=>legacy}, legacy.id);
+  assert.equal(initial.info.gold, 0);
+  assert.deepEqual(initial.progress.inventory, [{slot:0,itemId:900000,quantity:150}]);
+  await saveSnapshot(h.repo, legacy.id, body(initial));
+  const split = await snapshot(h.repo, legacy.id);
+  split.progress.inventory = [{slot:0,itemId:900000,quantity:3_000_000_000},{slot:1,itemId:900000,quantity:50}];
+  await saveSnapshot(h.repo, legacy.id, body(split));
+  const reloaded = await snapshot(h.repo, legacy.id);
+  assert.deepEqual(reloaded.progress.inventory, split.progress.inventory);
+  assert.equal(reloaded.info.gold, 0);
 });

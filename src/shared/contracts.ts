@@ -1,4 +1,6 @@
 import type { EquipmentSlot } from '../modules/items/types.js';
+import type { ItemSet } from '../modules/items/catalog.js';
+import type { ServerNotice } from '../modules/accounts/server-notice.js';
 import type { AccountRecord, SessionRecord } from '../modules/accounts/types.js';
 import type { InferSchemaType } from 'mongoose';
 import type { infoSchema } from './schemas.js';
@@ -26,6 +28,8 @@ export interface Camp {
 }
 export interface LocationRecord { locationId: string; camps: Camp[] }
 export interface Repository {
+  itemSets(): Promise<ItemSet[]>;
+  serverNotice(): Promise<ServerNotice | null>;
   account?(id: number): Promise<AccountRecord | null>;
   accountByLogin?(login: string): Promise<AccountRecord | null>;
   accountCharacters?(id: number): Promise<CharacterRecord[]>;

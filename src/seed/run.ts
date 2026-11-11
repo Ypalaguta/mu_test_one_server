@@ -8,12 +8,20 @@ import { CharacterClass } from '../modules/classes/model.js';
 import { loadData } from './data.js';
 import { createOperations, applyOperations } from './operations.js';
 const mode = process.argv[2];
-if (mode !== 'static' && mode !== 'dev' && mode !== 'skills' && mode !== 'items') throw new Error('Expected static, dev, skills or items');
+if (process.argv.length !== 3) throw new Error('Unexpected seed arguments. For one item use npm run seed:item -- <id>.');
+if (mode !== 'static' && mode !== 'dev' && mode !== 'skills' && mode !== 'items' && mode !== 'catalog-meta') throw new Error('Unknown seed mode');
 // Complete validation, including cross-file references, before any data mutation.
 const devCredentials = mode === 'dev' ? credentials({login:process.env.DEV_LOGIN,password:process.env.DEV_PASSWORD}) : null;
 const data = await loadData(resolve(process.env.SEED_DIR || 'data'));
 try {
-  await connectDatabase();
+  if (mode === 'catalog-meta') {
+    if (!process.env.MONGODB_URI) throw new Error('MongoDB connection is not configured');
+    await mongoose.connect(process.env.MONGODB_URI, {serverSelectionTimeoutMS:5000});
+  } else await connectDatabase();
+  if (mode === 'catalog-meta' || mode === 'static') {
+    for (const collection of ['itemSets','serverNotices'])
+      await mongoose.connection.collection(collection).createIndex({id:1},{unique:true});
+  }
   if (mode === 'dev') {
     for (const character of data.characters) {
       if (!await CharacterClass.exists({ id: character.info.classId }))

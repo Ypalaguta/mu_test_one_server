@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import type { Repository } from '../../shared/contracts.js';
 
 export interface ServerNotice {
   id: string;
@@ -29,11 +29,14 @@ export function parseServerNotice(value: unknown): ServerNotice {
     news: list('news'), upcomingEvents: list('upcomingEvents') };
 }
 
-// Same relative layout in src and dist. A missing/broken optional notice must not prevent login.
-export async function loadServerNotice(file = new URL('../../../data/server-notice.json', import.meta.url)): Promise<ServerNotice> {
-  try { return parseServerNotice(JSON.parse(await readFile(file, 'utf8'))); }
+export async function loadServerNotice(repo: Pick<Repository, 'serverNotice'>): Promise<ServerNotice> {
+  const empty: ServerNotice = { id: '', enabled: false, title: '', message: '', news: [], upcomingEvents: [] };
+  try {
+    const value = await repo.serverNotice();
+    return value ? parseServerNotice(value) : empty;
+  }
   catch {
     console.warn('Server notice unavailable or invalid; omitted from presentation.');
-    return { id: '', enabled: false, title: '', message: '', news: [], upcomingEvents: [] };
+    return empty;
   }
 }

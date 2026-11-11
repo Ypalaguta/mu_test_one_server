@@ -9,13 +9,22 @@ import { validateState, saveSnapshot } from '../src/modules/progression/service.
 import { Skill } from '../src/modules/skills/model.js';
 import type { Repository, CharacterRecord } from '../src/shared/contracts.js';
 import { tokenHash } from '../src/modules/accounts/password.js';
-import { statFields } from '../src/shared/statFields.js';
+import { readStats, statFields } from '../src/shared/statFields.js';
+test('previous damage fields resolve once, including an explicit new zero', () => {
+ const s=readStats({meleeAttackFlat:10,meleeDamage:20,meleeAttackInc:30,physicalDamageInc:0});
+ assert.equal(s.attackPhysicalFlat,10);
+ assert.equal(s.attackDamageInc,20);
+ assert.equal(s.physicalDamageInc,0);
+ assert.equal('meleeAttackInc' in s,false);
+ assert.equal(readStats({meleeAttackInc:30}).physicalDamageInc,30);
+});
 const data=await loadData('data');
 process.env.GAME_SERVER_TOKEN='test-only-secret';
 const headers={'content-type':'application/json','X-Game-Server-Token':'test-only-secret','X-Account-Session':'a'.repeat(64)};
 function repository(){
  const store=new Map(data.characters.map(d=>[d.id,structuredClone(d) as CharacterRecord]));
  const repo:Repository={
+  itemSets:async()=>data.itemSets, serverNotice:async()=>data.serverNotices[0]!,
   account:async id=>id===1?{id:1,login:'admin',passwordHash:'unused',role:'admin',notes:'',characterLimit:7,ban:{startedAt:null,expiresAt:null,revokedAt:null,reason:'',issuedBy:0,revokedBy:0}}:null,
   sessionByHash:async hash=>hash===tokenHash('a'.repeat(64))?{tokenHash:hash,accountId:1,expiresAt:new Date(Date.now()+60000)}:null,
   character:async id=>store.get(id)??null,
@@ -58,17 +67,31 @@ test('state requires server token, public catalogue does not',async()=>api(async
  assert.equal((await fetch(base+'/skills')).status,200);
  assert.equal((await fetch(base+'/characters/1/state',{headers})).status,200);
 }));
+test('sets and item membership follow repository edits without restarting the API', async()=>api(async(base,repo)=>{
+ const endpoint=base+'/item-sets';
+ const sets=await(await fetch(endpoint)).json();
+ assert.ok(sets.some((s:any)=>s.id===2 && s.pieceIds.includes(1202)));
+ repo.itemSets=async()=>[{id:77,name:'Changed set',pieceIds:[1202],bonuses:[{pieces:1,skillId:20001}]}];
+ const changed=await(await fetch(endpoint)).json();
+ assert.deepEqual(changed,await repo.itemSets());
+ assert.equal((await(await fetch(base+'/items/1202')).json()).setId,77);
+}));
+test('catalog-meta bootstrap only inserts missing sets and notices',()=>{
+ const ops=createOperations(data,'catalog-meta');
+ assert.deepEqual(ops.map(op=>op.collection),['itemSets','itemSets','serverNotices']);
+ assert.ok(ops.every(op=>Object.keys(op.update).join()==='$setOnInsert'));
+});
 test('character snapshot contains inventory, info, skill state, actionbar and class stats',async()=>api(async base=>{
  const s=await(await fetch(base+'/characters/1/state',{headers})).json();assert.equal(s.info.characterName,'Admin');assert.equal(s.baseStats.hp,150);
- assert.equal(s.progress.inventoryCapacity,64);assert.equal(s.progress.inventory.length,3);assert.deepEqual(s.progress.achievements,[]);
+ assert.equal(s.progress.inventoryCapacity,64);assert.equal(s.progress.inventory.length,4);assert.deepEqual(s.progress.achievements,[]);
  assert.equal(Object.keys(s.baseStats).length,statFields.length);
 }));
 test('atomic save persists all changes and rejects stale version without partial writes',async()=>api(async base=>{
  const s=await(await fetch(base+'/characters/1/state',{headers})).json();const b=body(s);
- b.info.gold-=10;b.info.skillPoints-=1;b.progress.learned=[20001];b.progress.inventory[0].slot=20;b.actionBarSlots=[{slotNum:0,id:20001,type:'Skill'}];
- const res=await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)});assert.equal(res.status,200);const saved=await res.json();assert.equal(saved.revision,1);assert.equal(saved.info.gold,9990);
+ b.progress.inventory.find((x:any)=>x.itemId===900000).quantity-=10;b.info.skillPoints-=1;b.progress.learned=[20001];b.progress.inventory[0].slot=20;b.actionBarSlots=[{slotNum:0,id:20001,type:'Skill'}];
+ const res=await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)});assert.equal(res.status,200);const saved=await res.json();assert.equal(saved.revision,1);assert.equal(saved.progress.inventory.find((x:any)=>x.itemId===900000).quantity,9990);
  b.info.gold=0;assert.equal((await fetch(base+'/characters/1/state',{method:'PUT',headers,body:JSON.stringify(b)})).status,409);
- const again=await(await fetch(base+'/characters/1/state',{headers})).json();assert.equal(again.info.gold,9990);assert.equal(again.progress.inventory[0].slot,20);
+ const again=await(await fetch(base+'/characters/1/state',{headers})).json();assert.equal(again.progress.inventory.find((x:any)=>x.itemId===900000).quantity,9990);assert.equal(again.progress.inventory[0].slot,20);
 }));
 test('inventory rejects duplicate/out-of-range slots, unknown items and stack overflow',async()=>api(async base=>{
  const s=await(await fetch(base+'/characters/1/state',{headers})).json();

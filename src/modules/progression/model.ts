@@ -1,7 +1,7 @@
 import { equipmentSlots } from '../items/types.js';
 import { Schema } from 'mongoose';
 import { embedded, integer, idList } from '../../shared/schemas.js';
-const stack = new Schema({ slot: integer(), itemId: integer(1,1), quantity: integer(1,1) }, embedded);
+const stack = new Schema({ slot: integer(), itemId: integer(1,1), quantity: { ...integer(1,1), max: Number.MAX_SAFE_INTEGER } }, embedded);
 const equipped = new Schema({ slot: { type: String, enum: equipmentSlots, required: true }, itemId: integer(1,1) }, embedded);
 const modifier = new Schema({ familyId: integer(1,1), skillId: integer(1,1) }, embedded);
 export const progressSchema = new Schema({

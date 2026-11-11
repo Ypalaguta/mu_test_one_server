@@ -147,9 +147,12 @@ for lv in range(1,121):
  chosen['levels']=sorted(chosen['levels']+[lv])
 OLD_BOOK_IDS={70000+i*10+r for i in range(24) for r in range(2,11)}
 NEW_BOOK_IDS=set(range(80001,80007))|{81000+i*2+s for i in range(len(F)) for s in range(2)}
-items=[i for i in read('items.json') if i['id'] not in OLD_BOOK_IDS|NEW_BOOK_IDS]
+catalogue=read('items.json')
+book_descriptions={(i['id'],i['name']):i['description'] for i in catalogue if i['id'] in NEW_BOOK_IDS and i.get('description')}
+items=[i for i in catalogue if i['id'] not in OLD_BOOK_IDS|NEW_BOOK_IDS]
 zero={k:0 for k in read('classes.json')[0]['baseStats']};books={};skills=[];rows=[]
 def book(bid,name,level,desc):
+ desc=book_descriptions.get((bid,name),desc)
  books[bid]=dict(id=bid,name=name,itemLevel=level,type='Misc',slot='None',inventoryTab='Misc',maxStack=99,weight=100,iconName='Knight_SkillBook',description=desc,stats=zero.copy())
 for ix,doctrine in enumerate(['Martial','Guardian','Arcane']):
  for tier in [1,2]:book(80001+ix+(tier-1)*3,('Advanced ' if tier==2 else '')+doctrine+' Doctrine',41 if tier==1 else 91,'Consumed for '+doctrine.lower()+' upgrades. Learn through the Skills window.')

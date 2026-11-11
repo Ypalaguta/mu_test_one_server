@@ -1,4 +1,6 @@
+import { readStats } from '../shared/statFields.js';
 import type { RequestHandler } from 'express';
+import { catalogItem, goldId } from '../modules/items/catalog.js';
 import type { Repository } from '../shared/contracts.js';
 import { skillResponse } from '../modules/skills/service.js';
 import { characterStats } from '../modules/characters/service.js';
@@ -35,7 +37,8 @@ export function createController(repo: Repository) {
 
         res.json({
             id: doc.id,
-            ...doc.info
+            ...doc.info,
+            gold: doc.progress.inventory.reduce((sum, stack) => sum + (stack.itemId === goldId ? stack.quantity : 0), doc.info.gold)
         });
     });
 
@@ -94,8 +97,8 @@ export function createController(repo: Repository) {
         const doc = found(await repo.monster(id));
 
         res.json({
-            baseStats: doc.baseStats,
-            growthStats: doc.growthStats
+            baseStats: readStats(doc.baseStats),
+            growthStats: readStats(doc.growthStats)
         });
     });
 
@@ -127,11 +130,11 @@ export function createController(repo: Repository) {
 
         console.log(`item ${id}`);
 
-        const d = found(await repo.item(id));
+        const d = found(await catalogItem(repo, id));
 
         res.json({ id: d.id, name: d.name, type: d.type, slot: d.slot, requirements: d.requirements,
             stats: d.stats, description: d.description, iconName: d.iconName, executionId: d.executionId,
-            inventoryTab: d.inventoryTab, maxStack: d.maxStack });
+            inventoryTab: d.inventoryTab, maxStack: d.maxStack, setId: d.setId });
     });
 
     const skills = withErrorLogging('skills', async (_req, res) => {
@@ -158,8 +161,8 @@ export function createController(repo: Repository) {
         res.json({
             id: d.id,
             name: d.name,
-            baseStats: d.baseStats,
-            growthStats: d.growthStats,
+            baseStats: readStats(d.baseStats),
+            growthStats: readStats(d.growthStats),
             skillIds: d.skillIds
         });
     });

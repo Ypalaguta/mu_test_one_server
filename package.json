@@ -12,11 +12,13 @@
     "dev": "node --env-file=.env --import tsx --watch src/server.ts",
     "start": "node --env-file=.env dist/server.js",
     "seed:static": "node --env-file=.env --import tsx src/seed/run.ts static",
+    "seed:catalog-meta": "node --env-file=.env --import tsx src/seed/run.ts catalog-meta",
     "seed:dev": "node --env-file=.env --import tsx src/seed/run.ts dev",
     "seed:check": "node --import tsx src/seed/check.ts",
     "test": "node --import tsx --test test/*.test.ts",
     "seed:skills": "node --env-file=.env --import tsx src/seed/run.ts skills",
     "seed:items": "node --env-file=.env --import tsx src/seed/run.ts items",
+    "seed:item": "node --env-file=.env --import tsx src/seed/items-basic.ts --file data/items.json --id",
     "seed:knight": "node --env-file=.env --import tsx src/seed/knight.ts"
   },
   "dependencies": {

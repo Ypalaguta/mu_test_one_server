@@ -8,11 +8,15 @@ async function main(): Promise<void> {
   let check = false;
   let update = false;
   let file = resolve('data/items-basic.json');
+  let onlyId: number | undefined;
   const args = process.argv.slice(2);
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--check') check = true;
     else if (args[i] === '--update') update = true;
-    else if (args[i] === '--file') {
+    else if (args[i] === '--id') {
+      onlyId = Number(args[++i]);
+      if (!Number.isSafeInteger(onlyId) || onlyId <= 0) throw new Error('--id requires a positive item ID');
+    } else if (args[i] === '--file') {
       const value = args[++i];
       if (!value || value.startsWith('--')) throw new Error('--file requires a path');
       file = resolve(value);
@@ -31,12 +35,14 @@ async function main(): Promise<void> {
       throw new Error(`Invalid integer id at index ${index}`);
     if (ids.has(value.id)) throw new Error(`Duplicate item id: ${value.id}`);
     ids.add(value.id);
+    if (onlyId !== undefined && value.id !== onlyId) continue;
     const document = new Item(value);
     await document.validate();
     const { _id, ...data } = document.toObject();
     documents.push(data);
   }
   const counts: Record<string, number> = {};
+  if (!documents.length) throw new Error('Requested item is missing from the catalogue');
   for (const item of documents) counts[item.inventoryTab] = (counts[item.inventoryTab] ?? 0) + 1;
   console.log(`Validated ${documents.length} items: ${JSON.stringify(counts)}`);
   if (check) {

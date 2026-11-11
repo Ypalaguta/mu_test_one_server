@@ -1,5 +1,6 @@
 import { login, register, authenticate, ownCharacter } from '../modules/accounts/service.js';
 import { addItem } from '../modules/accounts/admin.js';
+import { catalogItems } from '../modules/items/catalog.js';
 import { tokenHash } from '../modules/accounts/password.js';
 import { ApiError } from './errors.js';
 import { gameServerOnly, snapshot, saveSnapshot } from '../modules/progression/service.js';
@@ -33,7 +34,12 @@ export function createRoutes(repo: Repository): Router {
   r.use('/characters/:id',async(req,_res,next)=>{await ownCharacter(repo,req.get('X-Account-Session'),parseId(req.params.id));next();});
   r.get('/characters/:id/state', async (req, res) => { res.json(await snapshot(repo, parseId(req.params.id))); });
   r.put('/characters/:id/state', async (req, res) => { res.json(await saveSnapshot(repo, parseId(req.params.id), req.body)); });
-  r.get('/items', async (_req, res) => { res.json((await repo.items()).map(({_id, ...d}: any) => d)); });
+  r.get('/items', async (_req, res) => { res.json((await catalogItems(repo)).map(({_id, ...d}: any) => d)); });
+  r.get('/item-sets', async (_req, res) => {
+    const itemSets = await repo.itemSets();
+    const items = await catalogItems(repo, itemSets);
+    res.json(itemSets.map(set => ({...set, pieceIds: items.filter(item => item.setId === set.id).map(item => item.id)})));
+  });
   r.get('/characters/:id/info', c.characterInfo);
   r.get('/characters/:id/stats', c.characterStats);
   r.get('/characters/:id/action-bar', c.characterActionBar);

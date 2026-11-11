@@ -1,0 +1,6 @@
+[
+  {"id":1,"name":"Basic Plate","pieceIds":[2021,2022,2023,2024,2025],
+   "bonuses":[{"pieces":3,"skillId":21701},{"pieces":5,"skillId":22001}]},
+  {"id":2,"name":"Veteran's Blade","pieceIds":[1202],
+   "bonuses":[{"pieces":1,"skillId":20001}]}
+]

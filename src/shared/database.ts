@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+import type { ItemSet } from '../modules/items/catalog.js';
+import type { ServerNotice } from '../modules/accounts/server-notice.js';
 import { Account, AccountSession, Counter } from '../modules/accounts/model.js';
 import { Character } from '../modules/characters/model.js';
 import { Monster } from '../modules/monsters/model.js';
@@ -18,6 +20,8 @@ async function nextId(key: string) {
   if(c.value>2147483647)throw new Error('ID range exhausted');return c.value;
 }
 export const repository: Repository = {
+  itemSets: () => mongoose.connection.db!.collection<ItemSet>('itemSets').find({}, {projection:{_id:0}}).sort({id:1}).toArray(),
+  serverNotice: () => mongoose.connection.db!.collection<ServerNotice>('serverNotices').findOne({enabled:true}, {projection:{_id:0}, sort:{_id:-1}}),
   account: id => Account.findOne({id}).lean().exec(),
   accountByLogin: login => Account.findOne({login}).lean().exec(),
   accountCharacters: accountId => Character.find({accountId}).sort({id:1}).lean().exec(),

@@ -1,4 +1,6 @@
 import { readFile } from 'node:fs/promises';
+import { setMembership, type ItemSet } from '../modules/items/catalog.js';
+import { parseServerNotice } from '../modules/accounts/server-notice.js';
 import { resolve } from 'node:path';
 import { Character } from '../modules/characters/model.js';
 import { Monster } from '../modules/monsters/model.js';
@@ -49,6 +51,15 @@ export async function loadData(directory: string) {
   for (const character of characters) reference(classIds, character.info.classId, 'character class');
   for (const location of spawns) for (const camp of location.camps)
     for (const member of camp.monsters) reference(monsterIds, Number(member.enemyId), 'spawn monster');
-  return { skills, classes, items, monsters, spawns, characters };
+  const itemSets: ItemSet[] = JSON.parse(await readFile(resolve(directory,'item-sets.json'),'utf8'));
+  unique(itemSets.map(set => set.id), 'item sets');
+  setMembership(itemSets);
+  for (const set of itemSets) {
+    if (!Number.isSafeInteger(set.id) || set.id <= 0 || !set.name.trim()) throw Error('Invalid item set');
+    set.pieceIds.forEach(id => reference(itemIds, id, 'set item'));
+    set.bonuses.forEach(bonus => reference(skillIds, bonus.skillId, 'set skill'));
+  }
+  const notice = parseServerNotice(JSON.parse(await readFile(resolve(directory,'server-notice.json'),'utf8')));
+  return { skills, classes, items, monsters, spawns, characters, itemSets, serverNotices:[notice] };
 }
 export type SeedData = Awaited<ReturnType<typeof loadData>>;

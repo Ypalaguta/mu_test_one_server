@@ -40,7 +40,7 @@ test('named books only open post-40/90 stages; six doctrines pay later ranks',()
   }
  }
  assert.equal(named.size,68);assert.equal(common.size,6);
- assert.equal(data.items.filter(i=>i.id>=80000).length,74);
+ assert.equal(data.items.filter(i=>i.id>=80000 && i.iconName==='Knight_SkillBook').length,74);
  assert.ok(data.items.every(i=>!legacyBookIds.includes(i.id)));
 });
 test('snapshots preserve prior bonuses; resource variants appear progressively after level 40',()=>{

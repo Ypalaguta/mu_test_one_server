@@ -38,7 +38,7 @@ export async function login(repo:Repository,raw:unknown) {
  const sessionToken=randomBytes(32).toString('hex');
  const sessionExpiresAt=new Date(Date.now()+12*60*60*1000);
  await repo.createSession({tokenHash:tokenHash(sessionToken),accountId:a.id,expiresAt:sessionExpiresAt});
- return {account:safeAccount(a),characters,sessionToken,sessionExpiresAt:sessionExpiresAt.toISOString(),serverNotice:await loadServerNotice()};
+ return {account:safeAccount(a),characters,sessionToken,sessionExpiresAt:sessionExpiresAt.toISOString(),serverNotice:await loadServerNotice(repo)};
 }
 export async function authenticate(repo:Repository,token:unknown) {
  if(typeof token!=='string'||!/^[a-f0-9]{64}$/.test(token)||!repo.sessionByHash||!repo.account)throw new ApiError(401,'SESSION_REQUIRED','Account session required');

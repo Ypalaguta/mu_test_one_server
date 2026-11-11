@@ -16,6 +16,7 @@ function fixture(role='admin') {
  const rows=new Map<number,CharacterRecord>([[1,structuredClone(data.characters[0]!) as CharacterRecord]]);
  const sessions=new Map<string,SessionRecord>();let writes=0;
  const repo:Repository={
+  itemSets:async()=>data.itemSets, serverNotice:async()=>data.serverNotices[0]!,
   account:async id=>id===1?account:id===2?{...account,id:2,role:'player'}:null,
   accountByLogin:async name=>name===account.login?account:null,
   accountCharacters:async id=>[...rows.values()].filter(c=>c.accountId===id),

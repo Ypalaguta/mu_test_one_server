@@ -1,7 +1,8 @@
 import { skillSchema } from './model.js';
+import { readStats } from '../../shared/statFields.js';
 import type { SkillRecord } from '../../shared/contracts.js';
 export function skillResponse(d: SkillRecord) {
-  return { ...Object.fromEntries(Object.keys(skillSchema.paths).filter(k => k !== '_id').map(k => [k, (d as unknown as Record<string,unknown>)[k]])), icon: null };
+  return { ...Object.fromEntries(Object.keys(skillSchema.paths).filter(k => k !== '_id').map(k => [k, (d as unknown as Record<string,unknown>)[k]])), stats: readStats(d.stats), icon: null };
 }
 export function validateSkillGraph(skills: SkillRecord[]) {
   const byId = new Map(skills.map(s => [s.id, s]));

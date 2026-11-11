@@ -7,7 +7,11 @@ import { createOperations } from '../src/seed/operations.js';
 test('item-only seed includes starter gear without writing characters or other catalogues', async () => {
   const data = await loadData(resolve('data'));
   const operations = createOperations(data, 'items');
-  assert.equal(data.items.length, 261);
+  assert.equal(data.items.length, 262);
+  const gold = data.items.find(item => item.id === 900000)!;
+  assert.equal(gold.type, 'Currency');
+  assert.equal(gold.maxStack, Number.MAX_SAFE_INTEGER);
+  assert.deepEqual(gold.tradeRestrictions, []);
   assert.equal(operations.length, data.items.length);
   assert.ok(operations.every(op => op.collection === 'items' && op.update.$set));
   for (const id of [4, 5, 6, 7, 8, 9]) {

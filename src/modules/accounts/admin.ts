@@ -1,7 +1,8 @@
 import type { Repository } from '../../shared/contracts.js';
 import { authenticate } from './service.js';
 import { ApiError, found } from '../../http/errors.js';
-import { saveSnapshot } from '../progression/service.js';
+import { saveSnapshot, withInventoryGold } from '../progression/service.js';
+import { catalogItem } from '../items/catalog.js';
 export async function addItem(repo:Repository,token:unknown,id:number,raw:unknown) {
  const caller=await authenticate(repo,token);
  if(caller.role!=='admin'&&caller.role!=='gm')throw new ApiError(403,'ADMIN_REQUIRED','Administrator permission required');
@@ -14,8 +15,8 @@ export async function addItem(repo:Repository,token:unknown,id:number,raw:unknow
   typeof b.itemId!=='number'||!Number.isInteger(b.itemId)||b.itemId<1||
   typeof b.quantity!=='number'||!Number.isInteger(b.quantity)||b.quantity<1||b.quantity>1000000||b.expectedRevision!==target.revision)
   throw new ApiError(400,'INVALID_ITEM','Invalid item, quantity, or character revision');
- const def=found(await repo.item(b.itemId));
- const next=structuredClone(target);let left=b.quantity;
+ const def=found(await catalogItem(repo,b.itemId));
+ const next=withInventoryGold(target);let left=b.quantity;
  for(const s of next.progress.inventory)if(s.itemId===b.itemId){const n=Math.min(left,Math.max(0,def.maxStack-s.quantity));s.quantity+=n;left-=n;}
  for(let slot=0;slot<next.progress.inventoryCapacity&&left>0;slot++)if(!next.progress.inventory.some(s=>s.slot===slot)){
   const quantity=Math.min(left,def.maxStack);next.progress.inventory.push({slot,itemId:b.itemId,quantity});left-=quantity;

@@ -1,4 +1,6 @@
+import { readStats } from '../../shared/statFields.js';
 import { equipmentError } from '../items/equipment.js';
+import { catalogItems, goldId, grantedSkills } from '../items/catalog.js';
 import { isValidCharacterName } from '../characters/names.js';
 import { timingSafeEqual } from 'node:crypto';
 import type { RequestHandler } from 'express';
@@ -15,24 +17,43 @@ export const gameServerOnly: RequestHandler = (req, _res, next) => {
   next();
 };
 export async function snapshot(repo: Repository, id: number) {
-  const d = found(await repo.character(id));
+  const d = withInventoryGold(found(await repo.character(id)));
   const cls = found(await repo.characterClass(d.info.classId));
-  return { id: d.id, accountId:d.accountId, isActive:d.isActive, isMain:d.isMain, aiSettings:d.aiSettings, revision: d.revision, info: d.info, progress: { ...d.progress, equipment: d.progress.equipment ?? [] }, actionBarSlots: d.actionBarSlots, baseStats: cls.baseStats, growthStats: cls.growthStats };
+  return { id: d.id, accountId:d.accountId, isActive:d.isActive, isMain:d.isMain, aiSettings:d.aiSettings, revision: d.revision, info: d.info, progress: { ...d.progress, equipment: d.progress.equipment ?? [] }, actionBarSlots: d.actionBarSlots, baseStats: readStats(cls.baseStats), growthStats: readStats(cls.growthStats) };
+}
+// Pure conversion on read. The next revision-checked write persists it once.
+export function withInventoryGold(record: CharacterRecord) {
+  const state = structuredClone(record);
+  const legacy = state.info.gold;
+  if (!legacy) return state;
+  const bag = state.progress.inventory;
+  const stack = bag.find(s => s.itemId === goldId);
+  if (stack) stack.quantity += legacy;
+  else {
+    let slot = 0;
+    while (bag.some(s => s.slot === slot)) ++slot;
+    bag.push({slot, itemId: goldId, quantity: legacy});
+  }
+  state.info.gold = 0;
+  return state;
 }
 export async function validateState(repo: Repository, state: CharacterRecord) {
   const fail = (message: string): never => { throw new ApiError(400, 'INVALID_STATE', message); };
   const p = state.progress;
-  const items = new Map((await repo.items()).map(v => [v.id, v]));
+  const sets = await repo.itemSets();
+  const items = new Map((await catalogItems(repo, sets)).map(v => [v.id, v]));
   const skills = new Map((await repo.skills()).map(v => [v.id, v]));
   const families = new Set([...skills.values()].filter(v => !v.modifierOfSkill).map(v => v.familyId));
   const slots = new Set<number>();
   for (const entry of p.inventory) {
-    if (slots.has(entry.slot) || entry.slot >= p.inventoryCapacity) fail('Invalid inventory slot');
+    const extraGoldSlot = entry.itemId === goldId && entry.slot === p.inventoryCapacity;
+    if (slots.has(entry.slot) || (entry.slot >= p.inventoryCapacity && !extraGoldSlot)) fail('Invalid inventory slot');
     slots.add(entry.slot);
     const item = items.get(entry.itemId);
     if (!item || entry.quantity > item.maxStack) fail('Unknown item or stack overflow');
   }
   const equipError = equipmentError(p.equipment ?? [], items);
+  if (!Number.isSafeInteger(p.inventory.filter(x => x.itemId === goldId).reduce((sum,x) => sum+x.quantity,0))) fail('Gold exceeds numeric precision');
   if (equipError) fail(equipError);
   if (p.accessible.some(f => !families.has(f))) fail('Unknown accessible family');
   const learnedFamilies = new Set<number>(); const suppressed = new Set<number>();
@@ -54,8 +75,9 @@ export async function validateState(repo: Repository, state: CharacterRecord) {
     if (selected.has(m.familyId) || !learnedFamilies.has(m.familyId) || skills.get(m.skillId)?.modifierOfSkill !== m.familyId) fail('Invalid selected modifier');
     selected.add(m.familyId);
   }
+  const granted = grantedSkills(p.equipment ?? [], items, sets);
   for (const slot of state.actionBarSlots) {
-    if (slot.type === 'Skill' && !p.learned.includes(slot.id)) fail('Action bar references an unlearned skill');
+    if (slot.type === 'Skill' && !p.learned.includes(slot.id) && !(granted.has(slot.id) && skills.has(slot.id))) fail('Action bar references an unlearned skill');
     if (slot.type === 'Item' && !items.has(slot.id)) fail('Unknown action bar item');
   }
 }
@@ -73,7 +95,7 @@ export async function saveSnapshot(repo: Repository, id: number, raw: unknown) {
   let normalized: CharacterRecord;
   try {
     const doc = new Character({ id, accountId:existing.accountId, isActive:existing.isActive, isMain:existing.isMain, aiSettings:existing.aiSettings, revision: body.expectedRevision, info: body.info, progress: body.progress, actionBarSlots: body.actionBarSlots });
-    await doc.validate(); normalized = doc.toObject();
+    await doc.validate(); normalized = withInventoryGold(doc.toObject());
   } catch { throw new ApiError(400,'INVALID_STATE','Invalid character fields'); }
   normalized.info.staff = existing.info.staff; // Display-only legacy field; never an authorization source.
   if (normalized.info.characterName !== existing.info.characterName && !isValidCharacterName(normalized.info.characterName))
@@ -83,5 +105,5 @@ export async function saveSnapshot(repo: Repository, id: number, raw: unknown) {
   const cls = found(await repo.characterClass(normalized.info.classId));
   const saved = await repo.saveState(id, Number(body.expectedRevision), normalized);
   if (!saved) throw new ApiError(409,'STATE_CONFLICT','Reload character before retrying');
-  return { id, accountId:saved.accountId, isActive:saved.isActive, isMain:saved.isMain, aiSettings:saved.aiSettings, revision: saved.revision, info: saved.info, progress: saved.progress, actionBarSlots: saved.actionBarSlots, baseStats: cls.baseStats, growthStats: cls.growthStats };
+  return { id, accountId:saved.accountId, isActive:saved.isActive, isMain:saved.isMain, aiSettings:saved.aiSettings, revision: saved.revision, info: saved.info, progress: saved.progress, actionBarSlots: saved.actionBarSlots, baseStats: readStats(cls.baseStats), growthStats: readStats(cls.growthStats) };
 }
